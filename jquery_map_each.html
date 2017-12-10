@@ -7,6 +7,7 @@
 		jquery事件绑定
 	</title>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$("#btn1").bind("click", function () {
@@ -67,11 +68,10 @@
 </head>
 
 <body>
-	<button id="btn1">Map1 Test</button>
-	<button id="btn2">Map2 Test</button>
-
-	<button id="btn3">Each1 Test</button>
-	<button id="btn4">Each2 Test</button>
+	<button class="btn btn-success" id="btn1">Map1 Test</button>
+	<button class="btn btn-danger" id="btn2">Map2 Test</button>
+	<button class="btn btn-default" id="btn3">Each1 Test</button>
+	<button class="btn btn-primary" id="btn4">Each2 Test</button>
 </body>
 
 </html>
