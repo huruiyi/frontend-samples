@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>body,document</title>
+    <style type="text/css">
+        body {
+            background-color: mediumpurple;
+            width:500px;
+            height:500px;
+            margin:0 auto;
+        }
+    </style>
+    <script type="text/javascript">
+        //只要是操作页面的元素,那么就要写onload
+        onload = function () {
+
+            document.body.onclick = function () {
+                alert('body的范围');
+                this.style.backgroundColor="red"
+            };
+
+            document.onclick = function () {
+                alert('document的范围');
+            };
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
