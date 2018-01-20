@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Demo-★☆★☆★☆★☆★☆★☆★☆★☆</title>
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <style type="text/css">
         * {
             padding: 5px;
@@ -16,11 +16,22 @@
             padding: 0;
         }
 
+        fieldset {
+            border: #0078d7 2px solid;
+        }
+
+            fieldset legend {
+                width: 200px;
+                text-align: center;
+                border: #0078d7 1px solid;
+            }
+
         #div-a {
             height: 60px;
             line-height: 60px;
             text-align: center;
-            background-color: cornflowerblue;
+            background-color: #0078d7;
+            color: white;
         }
 
         #cover {
@@ -55,7 +66,7 @@
         }
 
             table td {
-                border: darkorange solid 1px;
+                border: #0078d7 solid 1px;
                 width: 80px;
                 text-align: center;
             }
@@ -68,9 +79,9 @@
         div.polaroid {
             width: 294px;
             padding: 10px 10px 20px 10px;
-            border: 1px solid #BFBFBF;
+            border: 1px solid #0078d7;
             background-color: white;
-            box-shadow: 2px 2px 3px #aaaaaa;
+            box-shadow: 2px 2px 2px #0078d7;
         }
 
         div.rotate_left {
@@ -98,6 +109,43 @@
         table#t3, table#t1 {
             margin-right: 20px;
         }
+
+        div#divKey {
+            width: 700px;
+            height: 200px;
+            background-color: #0078d7;
+        }
+
+        div.demorect {
+            margin: 100px auto;
+            width: 300px;
+            height: 300px;
+            background: #ededed;
+            position: relative;
+            transform: rotate(45deg);
+        }
+
+            div.demorect .fl {
+                width: 300px;
+                height: 145px;
+                background: #00cb99;
+            }
+
+            div.demorect .fr {
+                width: 300px;
+                height: 145px;
+                margin-top: 10px;
+                background: #0093b4;
+            }
+
+            div.demorect .pa {
+                position: absolute;
+                top: 75px;
+                left: 75px;
+                width: 150px;
+                height: 150px;
+                background-color: #f2f2f2;
+            }
     </style>
     <script type="text/javascript">
         window.onload = function () {
@@ -226,12 +274,12 @@
             var len = document.getElementById("t1").getElementsByTagName("tr").length;
             for (var i = 1; i < len; i += 2) {
                 var tr = document.getElementsByTagName("tr")[i];
-                tr.style.backgroundColor = "#da70d6";
+                tr.style.backgroundColor = "#0078d7";
             }
         }
 
         function Clicktr(tr) {
-            tr.style.backgroundColor = "yellow";
+            tr.style.backgroundColor = "#0078d7";
             var trs = document.getElementById("t2").getElementsByTagName("tr");
             var len = trs.length;
             for (var i = 0; i < len; i++) {
@@ -248,7 +296,7 @@
                     for (var j = 0; j < trs.length; j++) {
                         trs[j].style.backgroundColor = '';
                     }
-                    this.style.backgroundColor = '#cd5c5c';
+                    this.style.backgroundColor = '#0078d7';
                 };
             }
         }
@@ -256,12 +304,46 @@
         function Demo9() {
             var trs = document.getElementById('t4').getElementsByTagName('tr');
             for (var i = 0; i < trs.length; i++) {
-                if (i % 2 == 0) {
+                if (i % 2 === 0) {
                     trs[i].style.backgroundColor = '';
                 } else {
-                    trs[i].style.backgroundColor = 'yellow';
+                    trs[i].style.backgroundColor = '#0078d7';
                 }
             }
+        }
+
+        function QA() {
+            if (window.confirm("确认要删除")) {
+                alert("删除成功！");
+            }
+            else {
+                alert("未删除!");
+            }
+        }
+
+        function InputNumber() {
+            var num = window.prompt("请输入一个数字", 0);
+            if (num) {
+                var a = parseInt(num);
+                alert("你输入的数字是：" + a);
+
+            }
+            else {
+                alert("Error");
+            }
+        }
+
+        var CreaseNum = 10;
+        function MoveDiv() {
+            var divMove = document.getElementById("divSize");
+            var width = divMove.offsetWidth + CreaseNum;
+            var height = divMove.offsetHeight + CreaseNum;
+            CreaseNum = CreaseNum + 0.02 * 0.5 * 9.8 * 9.8;
+            divMove.style.width = width + "px";
+            divMove.style.height = height + "px";
+        }
+        function AutoExpand() {
+            setInterval(MoveDiv, 500);
         }
     </script>
 </head>
@@ -295,15 +377,15 @@
         <div id="coverShow">
             <img id="imgloading" src="../Images/loading1.jpg" />
         </div>
-        <input type="button" value="遮住" onclick="coverit()" />
+        <input class="btn btn-success" type="button" value="遮住" onclick="coverit()" />
     </fieldset>
 
     <fieldset>
         <legend>
             setTimeout和setInterval
         </legend>
-        <input type="button" id="btnsetTimeout" value="清理Timeout" />
-        <input type="button" id="btnsetInterval" value="清理Interval" />
+        <input class="btn btn-success" type="button" id="btnsetTimeout" value="清理Timeout" />
+        <input class="btn btn-success" type="button" id="btnsetInterval" value="清理Interval" />
     </fieldset>
     <fieldset>
         <legend>表格颜色</legend>
@@ -530,11 +612,28 @@
                 <p class="caption"> 2010年上海世博会，中国馆。 </p>
             </div>
         </div>
+        <div class="demorect">
+            <div class="fl"></div>
+            <div class="fr"></div>
+            <div class="pa"></div>
+        </div>
     </fieldset>
     <fieldset>
         <legend>按键</legend>
-        <div id="divKey" style=" width:700px; height:200px; background-color:#da70d6;">
+        <div id="divKey">
         </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>confirm和prompt</legend>
+        <input class="btn btn-success" type="button" value="确认删除" onclick="QA()" />
+        <input type="text" /><input class="btn btn-success" type="button" value="请输入一个数字" onclick="InputNumber()" />
+    </fieldset>
+
+    <fieldset>
+        <legend>样式</legend>
+        <input type="button" value="动起来" onclick="AutoExpand()" />
+        <div id="divSize" style="width: 50px; height: 50px; background-color: #0078d7; margin-left: 50px; "></div>
     </fieldset>
 </body>
 </html>

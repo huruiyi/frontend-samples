@@ -4,20 +4,22 @@
 <head>
     <title>body,document</title>
     <style type="text/css">
-        body {
-            background-color: mediumpurple;
-            width:500px;
-            height:500px;
-            margin:0 auto;
+        * {
+            margin: 0px;
+            margin: 0px;
         }
+         body {
+             background-color: mediumpurple;
+             width:300px;
+             height:300px;
+         }
     </style>
     <script type="text/javascript">
         //只要是操作页面的元素,那么就要写onload
         onload = function () {
-
             document.body.onclick = function () {
                 alert('body的范围');
-                this.style.backgroundColor="red"
+                this.style.backgroundColor = "red";
             };
 
             document.onclick = function () {
@@ -27,5 +29,6 @@
     </script>
 </head>
 <body>
+<div style="width: 300px; height: 300px; background-color: hotpink;"></div>
 </body>
 </html>
