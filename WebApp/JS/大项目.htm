@@ -20,7 +20,7 @@
 
             document.getElementById('txt').onchange = function () {
 
-            //判断body中有没有层,如果有删除
+                //判断body中有没有层,如果有删除
                 if (document.getElementById('dv')) {
                     document.body.removeChild(document.getElementById('dv'));
                 }
@@ -60,8 +60,6 @@
                         ulObj.appendChild(liObj);
                     }
 
-
-
                     //ulobj添加到层中
                     dvObj.appendChild(ulObj);
                     //层添加到body中
@@ -70,7 +68,6 @@
 
             };
         };
-    
     </script>
 </head>
 <body>

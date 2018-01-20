@@ -15,7 +15,7 @@
         function MyInput() {
             var num = window.prompt("请输入一个数字", 0);
             if (num) {
-                var a = parseInt(num)
+                var a = parseInt(num);
                 alert("你输入的数字是：" + a);
 
             }
@@ -32,8 +32,8 @@
             var divMove = document.getElementById("div1");
             //alert(div1.offsetHeight);
             //alert(div1.offsetWidth);
-            var width = div1.offsetWidth + CreaseNum;
-            var height = div1.offsetHeight + CreaseNum;
+            var width = divMove.offsetWidth + CreaseNum;
+            var height = divMove.offsetHeight + CreaseNum;
             CreaseNum = CreaseNum + 0.02 * 0.5 * 9.8 * 9.8;
             divMove.style.width = height + "px";
             divMove.style.height = height + "px";

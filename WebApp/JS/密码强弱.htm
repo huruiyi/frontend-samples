@@ -4,11 +4,11 @@
     <title></title>
     <script type="text/javascript">
 
-        onload = function () {
+        onload = function() {
 
             //获取所有的td
             var tds = document.getElementById('tb').getElementsByTagName('td');
-            document.getElementById('txt').onkeyup = function () {
+            document.getElementById('txt').onkeyup = function() {
 
                 //坑
                 for (var i = 0; i < tds.length; i++) {
@@ -34,18 +34,14 @@
                         tds[0].style.backgroundColor = 'blue';
                         tds[1].style.backgroundColor = 'blue';
                         tds[2].style.backgroundColor = 'blue';
-
                     }
                 }
-
-
             };
         };
 
         //先写方法,判断字符串中是否有字母 数字 特殊符号
         //级别的方法
         function checkPwd(msg) {
-
             var lvl = 0;
             if (msg.match(/[0-9]/)) {
                 lvl++;
@@ -61,7 +57,6 @@
             }
             return lvl;
         }
-    
     </script>
 </head>
 <body>

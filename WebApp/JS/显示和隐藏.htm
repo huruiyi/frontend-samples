@@ -4,36 +4,25 @@
     <title></title>
     <script type="text/javascript">
         window.onload = function () {
-
             document.getElementById('btnAll').onclick = function () {
-
                 var cks = document.getElementsByTagName('input');
                 for (var i = 0; i < cks.length; i++) {
                     cks[i].checked = true;
                 }
-
             };
             document.getElementById('btnNoAll').onclick = function () {
-
                 var cks = document.getElementsByTagName('input');
                 for (var i = 0; i < cks.length; i++) {
                     cks[i].checked = false;
                 }
-
             };
-
             document.getElementById('btnFx').onclick = function () {
-
                 var cks = document.getElementsByTagName('input');
                 for (var i = 0; i < cks.length; i++) {
                     cks[i].checked = !cks[i].checked;
-
                 }
-
             };
-
         };
-
     </script>
 </head>
 <body>
@@ -48,4 +37,3 @@
     </fieldset>
 </body>
 </html>
-

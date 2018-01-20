@@ -1,0 +1,540 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title>Demo-★☆★☆★☆★☆★☆★☆★☆★☆</title>
+    <style type="text/css">
+        * {
+            padding: 5px;
+            margin: 0;
+        }
+
+        body {
+            width: 70%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #div-a {
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: cornflowerblue;
+        }
+
+        #cover {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: gray;
+        }
+
+        #coverShow {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            margin-left: -120px;
+            margin-top: -90px;
+        }
+
+            #coverShow img {
+                margin: 0 auto;
+                height: 180px;
+                width: 240px;
+            }
+
+        table {
+            border-collapse: collapse;
+        }
+
+            table td {
+                border: darkorange solid 1px;
+                width: 80px;
+                text-align: center;
+            }
+
+        div#divRotate {
+            margin: 50px 50px 165px;
+            height: 200px;
+        }
+
+        div.polaroid {
+            width: 294px;
+            padding: 10px 10px 20px 10px;
+            border: 1px solid #BFBFBF;
+            background-color: white;
+            box-shadow: 2px 2px 3px #aaaaaa;
+        }
+
+        div.rotate_left {
+            float: left;
+            -ms-transform: rotate(7deg); /* IE 9 */
+            -moz-transform: rotate(7deg);
+            /* Firefox */ -webkit-transform: rotate(7deg); /* Safari and Chrome */
+            -o-transform: rotate(7deg);
+            /* Opera */ transform: rotate(29deg);
+        }
+
+        div.rotate_right {
+            float: left;
+            -ms-transform: rotate(-8deg);
+            /* IE 9 */ -moz-transform: rotate(-8deg); /* Firefox */
+            -webkit-transform: rotate(-8deg);
+            /* Safari and Chrome */ -o-transform: rotate(-8deg); /* Opera */
+            transform: rotate(-8deg);
+        }
+
+        div#t3t4 table, div#t1t2 {
+            float: left
+        }
+
+        table#t3, table#t1 {
+            margin-right: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            Demo6();
+            Demo7();
+            Demo8();
+            Demo9();
+            document.getElementById('divKey').onmousedown = function () {
+                if (window.event.altKey) {
+                    alert('按下了alt键');
+                } else if (window.event.shiftKey) {
+                    alert('按下了shift键');
+                } else if (window.event.ctrlKey) {
+                    alert('按下了ctrl键');
+                } else {
+                    alert('只按下了鼠标');
+                }
+            };
+        }
+        function Demo1() {
+            var n = "";
+            if (typeof (n) != 'undefined' && n != null) {
+                alert('可用');
+            } else {
+                alert('不可用');
+            }
+        }
+
+        function Demo2() {
+            n = 100;
+            alert("A1:" + n);
+        };
+        //Demo2();
+        //alert("A2:" + n);
+
+        if (true) {
+            var sum = 100;
+            for (var i = 0; i < 100; i++) {
+                sum += i;
+            }
+        }
+        //js中没有块级作用域
+        //alert("I:" + i);
+
+        function Demo3() {
+            var strs = new Array(8, 21, 5, 39, 12, 12, 19, 37);
+            var max = strs[0];
+            for (var i = 1; i < strs.length; i++) {
+                if (max < strs[i]) {
+                    max = strs[i];
+                }
+            }
+            alert("最大值是：" + max);
+        }
+        function Demo4() {
+            var strs = new Array("梅西 ", " 卡卡", " 郑大世");
+            var strResult = "";
+            for (var i = 0; i < strs.length - 1; i++) {
+                strResult += strs[i] + "|";
+            }
+            alert(strResult + strs[strs.length - 1]);
+        }
+        function Demo5() {
+            var strs = new Array(1, 2, 3, 4, 5, 6, 7);
+            var i;
+            for (i = 0; i < strs.length / 2; i++) {
+                var tem = strs[i];
+                strs[i] = strs[strs.length - 1 - i];
+                strs[strs.length - 1 - i] = tem;
+            }
+            var result = "";
+            for (i = 0; i < strs.length; i++) {
+                result += strs[i] + "  ";
+            }
+            alert(result);
+        }
+        function Demo6() {
+            var i = 1;
+            setInterval(function () {
+                i++;
+                document.getElementById('txtInterval').value = i;
+            }, 1000);
+        }
+
+        function coverit() {
+            var cover = document.getElementById("cover");
+            var covershow = document.getElementById("coverShow");
+            var img = document.getElementById("imgloading");
+            cover.style.display = 'block';
+            covershow.style.display = 'block';
+
+            setTimeout("showTime()", 3000);
+        }
+        function showTime() {
+            var cover = document.getElementById("cover");
+            var covershow = document.getElementById("coverShow");
+            cover.style.display = '';
+            covershow.style.display = '';
+        }
+
+        var timeoutIdIndex = 0;
+        var timeoutId = window.setTimeout(function () {
+            console.log("Hello World(setTimeout) " + timeoutIdIndex++);
+        },
+            1000);
+        function clearTimeoutDemo() {
+            window.clearTimeout(timeoutId);
+        }
+
+        var intervalIdIndex = 0;
+        var intervalId = window.setInterval(function () {
+            console.log("Hello World(setInterval) " + intervalIdIndex++);
+        },
+            1000);
+        function setIntervalDemo() {
+            window.clearInterval(intervalId);
+        }
+
+        window.setInterval(function () {
+            var tt = document.title; //获取值
+            document.title = tt.substr(1) + tt.charAt(0);
+        },
+            500);
+
+        function Demo7() {
+            var len = document.getElementById("t1").getElementsByTagName("tr").length;
+            for (var i = 1; i < len; i += 2) {
+                var tr = document.getElementsByTagName("tr")[i];
+                tr.style.backgroundColor = "#da70d6";
+            }
+        }
+
+        function Clicktr(tr) {
+            tr.style.backgroundColor = "yellow";
+            var trs = document.getElementById("t2").getElementsByTagName("tr");
+            var len = trs.length;
+            for (var i = 0; i < len; i++) {
+                if (trs[i].id != tr.id) {
+                    trs[i].style.backgroundColor = "white";
+                }
+            }
+        }
+
+        function Demo8() {
+            var trs = document.getElementById('t3').getElementsByTagName('tr');
+            for (var i = 0; i < trs.length; i++) {
+                trs[i].onclick = function () {
+                    for (var j = 0; j < trs.length; j++) {
+                        trs[j].style.backgroundColor = '';
+                    }
+                    this.style.backgroundColor = '#cd5c5c';
+                };
+            }
+        }
+
+        function Demo9() {
+            var trs = document.getElementById('t4').getElementsByTagName('tr');
+            for (var i = 0; i < trs.length; i++) {
+                if (i % 2 == 0) {
+                    trs[i].style.backgroundColor = '';
+                } else {
+                    trs[i].style.backgroundColor = 'yellow';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            a标签
+        </legend>
+        <a href="http://www.baidu.cn" onclick="alert(new Date().toLocaleTimeString());">百度1(会跳转)</a>
+        <a href="#" onclick="alert(new Date().toLocaleTimeString());">百度2</a>
+        <a href="javascript:void(0);" onclick="alert(new Date().toLocaleTimeString());">百度3</a>
+        <a href="javascript:alert(new Date().toLocaleTimeString());">百度4</a>
+    </fieldset>
+
+    <fieldset>
+        <legend>Interval</legend>
+        <input type="text" name="name" value="1" id="txtInterval" />
+    </fieldset>
+
+    <fieldset>
+        <legend>居中显示</legend>
+        <div id="div-a">This property affects the vertical positioning inside a line box of the boxes generated by an inline-level element</div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            遮罩层
+        </legend>
+        <input type="text">
+        <div id="cover"></div>
+        <div id="coverShow">
+            <img id="imgloading" src="../Images/loading1.jpg" />
+        </div>
+        <input type="button" value="遮住" onclick="coverit()" />
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            setTimeout和setInterval
+        </legend>
+        <input type="button" id="btnsetTimeout" value="清理Timeout" />
+        <input type="button" id="btnsetInterval" value="清理Interval" />
+    </fieldset>
+    <fieldset>
+        <legend>表格颜色</legend>
+        <div id="t1t2">
+            <table id="t1">
+                <tr>
+                    <td>
+                        A
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        C
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        A
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        C
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        A
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        C
+                    </td>
+                </tr>
+            </table>
+            <table id="t2">
+                <tr onclick="Clicktr(this)" id="r1">
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr onclick="Clicktr(this)" id="r2">
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr onclick="Clicktr(this)" id="r3">
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="t3t4">
+            <table id="t3" style=" cursor:pointer;">
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+            </table>
+            <table id="t4">
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        周润发
+                    </td>
+                    <td>
+                        刘德华
+                    </td>
+                    <td>
+                        周星驰
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>旋转</legend>
+        <div id="divRotate">
+            <div class="polaroid rotate_left">
+                <img src="../Images/yjx1.jpg" alt="郁金香" width="284" height="213" />
+                <p class="caption"> 上海鲜花港的郁金香，花名：Ballade Dream。 </p>
+            </div>
+            <div class="polaroid rotate_right">
+                <img src="../Images/yjx2.jpg" alt="世博中国馆" width="284" height="213" />
+                <p class="caption"> 2010年上海世博会，中国馆。 </p>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>按键</legend>
+        <div id="divKey" style=" width:700px; height:200px; background-color:#da70d6;">
+        </div>
+    </fieldset>
+</body>
+</html>

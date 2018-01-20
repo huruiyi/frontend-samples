@@ -5,20 +5,16 @@
     <title></title>
     <script type="text/javascript">
 
-
         var dic = { "百度": "http://www.baidu.com", "传智播客": "http://www.itcast.cn", "谷歌": "http://www.google.com" };
         //根据键值对创建表格
 
         onload = function () {
-
             document.getElementById('btn').onclick = function () {
-
                 //创建一个表格
                 var tbObj = document.createElement('table');
                 tbObj.border = '1'; //边框
                 //根据键值对的个数创建行
                 for (var item in dic) {
-
                     //创建行
                     var trObj = document.createElement('tr');
                     //创建单元格
@@ -36,7 +32,6 @@
                     trObj.appendChild(tdObj1);
                     trObj.appendChild(tdObj2);
 
-
                     //行添加到表中
                     tbObj.appendChild(trObj);
                 }
@@ -44,8 +39,6 @@
                 document.body.appendChild(tbObj);
             };
         };
-
-    
     </script>
 </head>
 <body>
