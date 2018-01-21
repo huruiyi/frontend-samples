@@ -78,8 +78,8 @@
             dvObj.id = "dvImg";
             var imObj = document.createElement('img');
             imObj.src = '../Images/0.jpg';
-            imObj.height = 500;
-            imObj.width = 700;
+            imObj.height = 200;
+            imObj.width = 350;
             dvObj.appendChild(imObj);
 
             dvObj.style.position = 'absolute';
@@ -134,7 +134,35 @@
             }
         };
     }
-    LoginShow();
+
+    //不让复制
+    document.body.oncopy = function () {
+        alert('谁让你赋值的,交钱了吗');
+        return false;
+    };
+    //不让粘贴
+    document.body.onpaste = function () {
+        alert('人家不让粘贴了啦');
+        return false;
+    };
+
+    document.getElementById('btnfloat').onclick = function () {
+        var dvObj = document.getElementById('divfloat');
+        if (typeof (dvObj.style.styleFloat) == 'string') {
+            dvObj.style.styleFloat = 'right';
+        } else {
+            dvObj.style.cssFloat = 'right';
+        }
+    };
+
+    document.onmousemove = function () {
+        var imObj = document.getElementById('imgfly');
+        imObj.style.position = "fixed";
+        imObj.width = 200;
+        imObj.height = 150;
+        imObj.style.left = window.event.clientX + 'px';
+        imObj.style.top = window.event.clientY + 'px';
+    };
 }
 
 window.onresize = function () {
@@ -336,17 +364,20 @@ function AutoExpand() {
 }
 
 function LoginShow() {
-    var lh = document.getElementById("loginDiv").offsetHeight;
-    var lw = document.getElementById("loginDiv").offsetWidth;
+    var loginDiv = document.getElementById("loginDiv");
+    //var lh = document.getElementById("loginDiv").offsetHeight;
+    //var lw = document.getElementById("loginDiv").offsetWidth;
 
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
-    var scy = document.body.scrollTop || window.scrollY;
-    var topp = ((h - lh) / 2) + "px";
-    document.getElementById("loginDiv").style.top = topp;
-    var leftp = ((w - lw) / 2) + "px";
-    document.getElementById("loginDiv").style.left = leftp;
+    var topp = ((h - 300) / 2) + "px";
+    var leftp = ((w - 300) / 2) + "px";
+
+    loginDiv.style.top = topp;
+    loginDiv.style.left = leftp;
+    loginDiv.style.width = "300px";
+    loginDiv.style.height = "300px";
 }
 
 function SetAttr() {
@@ -361,8 +392,9 @@ function SetAttr() {
 
 function ShowWindowsInfo() {
     var userAgent = window.navigator.userAgent;
-    //浏览器宽度信息
+    //屏幕宽带
     var screenwh = window.screen.width + "  " + window.screen.height;
+    //工作区宽度(出去任务栏宽度)
     var availWh = window.screen.availWidth + "  " + window.screen.availHeight;
     var appName = window.navigator.appName;
     var appCodeName = window.navigator.appCodeName;
@@ -433,4 +465,40 @@ function NumberToChar() {
         }
     }
     document.getElementById("lblKeyCode").innerText = html;
+}
+
+function RegTest1() {
+    var text = document.getElementById("sltStr");
+    text = text[text.selectedIndex].text;
+    var reg = new RegExp(/\d+/);
+    alert(reg.test(text));
+}
+
+function RegTest2() {
+    var msg = '中国移动:10086,中国联通:10010,中国电信:10000';
+    var reg = /\d{5}/g;
+    var result;
+    while ((result = reg.exec(msg)) != null) {
+        alert(result);
+    }
+}
+
+function RegTest3() {
+    var text = document.getElementById("txtEmail");
+    var reg = /\w+((-w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+/;
+    if (!reg.test(text.value)) {
+        text.style.borderColor = 'red';
+        text.style.borderWidth = 1;
+        text.style.borderStyle = "solid";
+    } else {
+        text.style.borderColor = '';
+        text.style.borderWidth = 1;
+        text.style.borderStyle = "solid";
+    }
+}
+
+function RegTest4() {
+    var str = " ABC DEF  ";
+    str = str.replace(/^\s+/, '').replace(/\s+$/, '');
+    alert("++" + str + "++");
 }

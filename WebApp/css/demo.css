@@ -9,6 +9,38 @@ body {
     padding: 0;
 }
 
+div#divfloatmenu {
+    position: fixed;
+    right: 30px;
+    top: 5%;
+    border: 1px solid #0078d7;
+    width: 200px;
+}
+
+    div#divfloatmenu ul {
+        background-color: antiquewhite;
+        margin: 0;
+        padding: 5px 5px;
+    }
+
+        div#divfloatmenu ul li {
+            list-style: none;
+            background-color: #0078d7;
+            height: 30px;
+            line-height: 30px;
+            margin: 2px 5px;
+            border-radius: 18px;
+            padding: 0 10px;
+        }
+
+            div#divfloatmenu ul li:hover {
+                background-color: mediumpurple;
+            }
+
+            div#divfloatmenu ul li a {
+                color: white;
+            }
+
 fieldset {
     border: #0078d7 2px solid;
 }
@@ -148,10 +180,8 @@ input[type=button] {
 }
 
 #loginDiv {
-    height: 300px;
-    width: 300px;
-    position: absolute;
     background-color: #1e90ff;
+    position: fixed;
     box-shadow: -1px 3px 15px #aaa;
 }
 
@@ -184,7 +214,7 @@ a.blk {
     font-weight: bold;
 }
 
-table#tbContent      td:last-child,
+table#tbContent td:last-child,
 table#tbInputContent td:last-child {
     width: 600px;
     text-align: left;
@@ -197,4 +227,10 @@ table#tbInputContent input#txtName, textarea#txtContent {
 .btnHaha {
     height: 35px;
     line-height: 20px;
+}
+
+div#divfloat {
+    background-color: #0078d7;
+    width: 500px;
+    height: 200px;
 }

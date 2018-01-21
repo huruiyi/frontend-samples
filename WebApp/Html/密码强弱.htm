@@ -4,11 +4,11 @@
     <title></title>
     <script type="text/javascript">
 
-        onload = function() {
+        onload = function () {
 
             //获取所有的td
             var tds = document.getElementById('tb').getElementsByTagName('td');
-            document.getElementById('txt').onkeyup = function() {
+            document.getElementById('txt').onkeyup = function () {
 
                 //坑
                 for (var i = 0; i < tds.length; i++) {
@@ -16,21 +16,19 @@
                 }
 
                 if (this.value.length > 0) {
-                    //判断密码的级别
+
                     var result = checkPwd(this.value);
-                    //弱
+
                     if (result <= 1) {
 
                         tds[0].style.backgroundColor = 'red';
 
-                        //中
-                    } else if (result == 2) {
+                    } else if (result === 2) {
 
                         tds[0].style.backgroundColor = 'green';
                         tds[1].style.backgroundColor = 'green';
 
-                        //强
-                    } else if (result == 3) {
+                    } else if (result === 3) {
                         tds[0].style.backgroundColor = 'blue';
                         tds[1].style.backgroundColor = 'blue';
                         tds[2].style.backgroundColor = 'blue';
