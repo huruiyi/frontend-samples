@@ -13,22 +13,16 @@
     <script type="text/javascript">
 
         onload = function () {
-            //隐藏
             document.getElementById('btnHidde').onclick = function () {
-
                 document.getElementById('dv').style.display = 'none';
             };
-            //显示
             document.getElementById('btnShow').onclick = function () {
-
                 document.getElementById('dv').style.display = 'block';
             };
-            //切换
             document.getElementById('btn').onclick = function () {
                 var dvObj = document.getElementById('dv');
                 alert(dvObj.style.display);
-
-                if (dvObj.style.display == 'none') {
+                if (dvObj.style.display === 'none') {
                     dvObj.style.display = 'block';
                 } else {
                     dvObj.style.display = 'none';

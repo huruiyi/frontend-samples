@@ -11,13 +11,12 @@
             intervalrId = setInterval(reg, 1000);
         }
         var intervalrId;
-        var time = 10
+        var time = 10;
         function reg() {
             time--;
             var btn = document.getElementById("btn");
-            if (time == 0) {
+            if (time === 0) {
                 btn.value = "注册";
-
                 // btn.removeAttribute("disabled");
                 btn.disabled = "";
                 clearInterval(intervalrId);
@@ -31,7 +30,7 @@
 
             var ck = document.getElementsByTagName("input");
             for (var i = 0; i < ck.length; i++) {
-                if (ck[i].type == "checkbox" && ck[i].id != "checkall") {
+                if (ck[i].type === "checkbox" && ck[i].id !== "checkall") {
                     if (ckall.checked) {
                         ck[i].checked = true;
                     }
@@ -46,7 +45,7 @@
             btn.value = "呜呜..";
         }
         function omout(btn) {
-            btn.value = "哈哈~"
+            btn.value = "哈哈~";
         }
 
         function Calc() {
@@ -147,7 +146,7 @@
 
         function LoseSeachFocus(txt) {
             txt.style.color = "gray";
-            if (txt.value == "") {
+            if (txt.value === "") {
                 txt.value = "请输入关键字";
             }
             else {
@@ -156,7 +155,7 @@
         }
 
         function GetSearchFoucus(txt) {
-            if (txt.value == "请输入关键字") {
+            if (txt.value === "请输入关键字") {
                 txt.value = "";
                 txt.style.color = "black";
             }
