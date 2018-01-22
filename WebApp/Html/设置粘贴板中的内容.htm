@@ -4,20 +4,15 @@
 <head>
     <title></title>
     <script type="text/javascript">
-        //页面加载
-        onload = function () {
-            //复制
-            document.body.oncopy = function () {
-                //时间间隔
-                setTimeout(function () {
-                    //获取粘贴板中的内容
-                    var txt = clipboardData.getData('text') + '    本文出自于网络百度百科';
-                    //设置内容
-                    clipboardData.setData('text', txt); //设置
-                }, 100);
 
+        onload = function() {
+            document.body.oncopy = function() {
+                setTimeout(function() {
+                        var txt = clipboardData.getData('text') + '    本文出自于网络百度百科';
+                        clipboardData.setData('text', txt);
+                    },
+                    100);
             };
-
         };
     </script>
 </head>

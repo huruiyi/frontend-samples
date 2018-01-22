@@ -1,5 +1,4 @@
 ﻿window.onload = function () {
-    Demo6();
     Demo7();
     Demo8();
     Demo9();
@@ -163,6 +162,19 @@
         imObj.style.left = window.event.clientX + 'px';
         imObj.style.top = window.event.clientY + 'px';
     };
+
+    document.getElementById('txtregtext').onfocus = function () {
+        if (this.value === '请输入搜索关键词' && this.style.color === 'gray') {
+            this.value = '';
+            this.style.color = 'black';
+        }
+    };
+    document.getElementById('txtregtext').onblur = function () {
+        if (this.value === '') {
+            this.style.color = 'gray';
+            this.value = '请输入搜索关键词';
+        }
+    };
 }
 
 window.onresize = function () {
@@ -225,7 +237,7 @@ function Demo5() {
     }
     alert(result);
 }
-function Demo6() {
+function Increase() {
     var i = 1;
     setInterval(function () {
         i++;
@@ -263,12 +275,12 @@ var intervalId = window.setInterval(function () {
     console.log("Hello World(setInterval) " + intervalIdIndex++);
 },
     1000);
-function setIntervalDemo() {
+function clearIntervalDemo() {
     window.clearInterval(intervalId);
 }
 
 window.setInterval(function () {
-    var tt = document.title; //获取值
+    var tt = document.title;
     document.title = tt.substr(1) + tt.charAt(0);
 },
     500);
@@ -279,9 +291,8 @@ function SetTimeOutReadme(btn) {
     var setId = setInterval(function () {
         i--;
         if (i <= 0) {
-            clearInterval(setId); //清除计时器
+            clearInterval(setId);
             btn.value = '同意';
-            //注意
             btn.disabled = false;
         } else {
             btn.value = '请仔细阅读协议(' + i + ')';
@@ -499,6 +510,91 @@ function RegTest3() {
 
 function RegTest4() {
     var str = " ABC DEF  ";
+    alert("++" + trim(str) + "++");
+}
+
+function RegTest5() {
+    var str = "Hello World！";
+    console.log(str.match("world"));
+    console.log(str.match("World"));
+    console.log(str.match("worlld"));
+    console.log(str.match("World！"));
+}
+
+function RegTest6() {
+    var str = "1 hello 4 match 3 world 2 javascript";
+    console.log(str.match(/\d+/g));
+    var pat = new RegExp("javascript");
+    var result = pat.test(str);
+    console.log("结果为：" + result);
+}
+function trim(str) {
     str = str.replace(/^\s+/, '').replace(/\s+$/, '');
-    alert("++" + str + "++");
+    return str;
+}
+function DivFly() {
+    document.onmousemove = function () {
+        var d = document.getElementById("divfly");
+        d.style.position = "fixed";
+        d.style.left = window.event.clientX + "px";
+        d.style.top = window.event.clientY + "px";
+    }
+}
+
+function SetinnerText() {
+    document.getElementById('divTextHtml').innerText = '<font face="全新硬笔行书简" color="red">这是层</font>';
+}
+
+function SetinnerHTML() {
+    document.getElementById('divTextHtml').innerHTML = '<font face="全新硬笔行书简" color="red">这是层</font>';
+}
+
+function ShowinnerText() {
+    alert(document.getElementById('divTextHtml').innerText);
+}
+
+function ShowinnerHTML() {
+    alert(document.getElementById('divTextHtml').innerHTML);
+}
+
+function SettextContentfirefox() {
+    //IE设置纯文本用innerText,火狐用的是textContent
+    if (typeof (document.getElementById('divTextHtml').innerText) == 'string') {
+        document.getElementById('divTextHtml').innerText = '<font face="全新硬笔行书简" color="red">这是层</font>';
+    } else {
+        document.getElementById('divTextHtml').textContent = '<a href="http://www.baidu.com">百度</a>';
+    }
+}
+
+function Success_Callback(data) {
+    console.log(data);
+}
+
+function GetJsonPName() {
+    $.ajax({
+        type: "get",
+        async: false,
+        url: "http://localhost:801/Service/Demo.ashx?action=GetJsonPName",
+        dataType: "jsonp",
+        jsonp: "callbackparam",
+        jsonpCallback: "Success_Callback",
+        success: function (json) {
+            console.log(json[0].name);
+        },
+        error: function () {
+            console.log('fail');
+        }
+    });
+}
+
+function GetJsonPMsg() {
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:801/Service/Demo.ashx?action=GetJsonPMsg",
+        dataType: "jsonp",
+        jsonp: "callback",
+        success: function (json) {
+            console.log(json.msg);
+        }
+    });
 }

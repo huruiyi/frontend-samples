@@ -584,15 +584,12 @@
     <Content Include="js\demo.js" />
     <Content Include="Html\HtmlPage1.html" />
     <Content Include="Html\Index.htm" />
-    <Content Include="Html\innerTex_Html.html" />
-    <Content Include="Html\Jsonp.html" />
     <Content Include="Html\JS_String.html" />
     <Content Include="Html\loading.html" />
     <Content Include="Html\Position练习.htm" />
     <Content Include="Html\Select.html" />
     <Content Include="Html\Tab.html" />
     <Content Include="Html\window对象.html" />
-    <Content Include="Html\三个事件的区别.htm" />
     <Content Include="Html\事件冒泡.htm" />
     <Content Include="Html\二级树型菜单1.html" />
     <Content Include="Html\元素定位.html" />
@@ -607,13 +604,11 @@
     <Content Include="Html\密码强弱.htm" />
     <Content Include="Html\小图显示大图.htm" />
     <Content Include="Html\层的显示和隐藏.htm" />
-    <Content Include="Html\文本框练习.htm" />
     <Content Include="Html\新增评论.htm" />
     <Content Include="Html\模拟多态.html" />
     <Content Include="Html\模拟继承.html" />
     <Content Include="Html\滚动条.html" />
     <Content Include="Html\瀑布流.html" />
-    <Content Include="Html\简单JS.html" />
     <Content Include="Html\简单拖拽1.html" />
     <Content Include="Html\简单拖拽2.html" />
     <Content Include="Html\简单拖拽3.html" />
@@ -623,7 +618,6 @@
     <Content Include="Html\表单元素2.html" />
     <Content Include="Html\表格元素.html" />
     <Content Include="Html\设置粘贴板中的内容.htm" />
-    <Content Include="Html\跟随鼠标移动.html" />
     <Content Include="res\56.mp4" />
     <Content Include="res\mass.mp3" />
     <Content Include="导航\Demo1\.idea\modules.xml" />
