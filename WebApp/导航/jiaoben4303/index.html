@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery Hover响应下拉导航菜单栏代码 - 站长素材</title>
-
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="css/head.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>jQuery Hover响应下拉导航菜单栏代码 - 站长素材</title>
+    
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/head.css"/>
 </head>
 <body>
 <!-- 公司页头-->
@@ -16,24 +17,29 @@
         <ul class="global-nav-left">
             <li><b></b><a onclick="myAddFavorite()" href="#">收藏站长素材</a></li>
             <li>
-                <div class="weixinshowPic"> <i class="i-qrcode"></i>关注站长
+                <div class="weixinshowPic"><i class="i-qrcode"></i>关注站长
                     <div class="wx_box"><span class="arrow"><i class="layer1"></i><i class="layer2"></i></span></div>
                 </div>
             </li>
         </ul>
-
+        
         <!--收藏关注end-->
         <div class="global-nav-right">
-            <a class="global-nav-right_a" target="_blank" href="#"> <i class="ico global-nav-right_i" title="vip"></i> <span style="float:left">创业项目</span> </a>
+            <a class="global-nav-right_a" target="_blank" href="#"> <i class="ico global-nav-right_i" title="vip"></i>
+                <span style="float:left">创业项目</span> </a>
             <div class="dropdown ">
-                <a href="#" class="dropdown-main"> <i class="ico helper-sprite-menu"></i> <span>网站导航</span> <i class="ico helper-sprite-dropdown"></i> </a>
+                <a href="#" class="dropdown-main"> <i class="ico helper-sprite-menu"></i> <span>网站导航</span> <i
+                        class="ico helper-sprite-dropdown"></i> </a>
                 <div class="dropdown-main_after"></div>
                 <div class="dropdown-sub" style="display:none;">
                     <div class="dropdown-sub_box">
                         <div class="menu_links2015">
-                            <a href="#" target="_blank"><img src="picture/menu-bd2.jpg" data-tangram-ori-src="picture/menu-bd2.jpg"> </a>
-                            <a href="#" target="_blank"><img src="picture/menu-bd3.jpg" data-tangram-ori-src="picture/menu-bd3.jpg"> </a>
-                            <a href="#" target="_blank"><img src="picture/menu-bd4.jpg" data-tangram-ori-src="picture/menu-bd4.jpg"> </a>
+                            <a href="#" target="_blank"><img src="picture/menu-bd2.jpg"
+                                                             data-tangram-ori-src="picture/menu-bd2.jpg"> </a>
+                            <a href="#" target="_blank"><img src="picture/menu-bd3.jpg"
+                                                             data-tangram-ori-src="picture/menu-bd3.jpg"> </a>
+                            <a href="#" target="_blank"><img src="picture/menu-bd4.jpg"
+                                                             data-tangram-ori-src="picture/menu-bd4.jpg"> </a>
                         </div>
                         <div class="menu_nav2015">
                             <p class="menu_nav2015_p1">
@@ -114,34 +120,35 @@
                             </p>
                         </div>
                     </div>
-                </div> <a class="global-nav-right_a" href="#">返回首页</a> </div>
+                </div>
+                <a class="global-nav-right_a" href="#">返回首页</a></div>
         </div>
     </div>
 </div>
- 
+
 
 <script type="text/javascript" src="js/jquery-min.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-						   
-	$('.weixinshowPic').hover(function() {
-		$(this).addClass('weixinshowPic-hover');
-	}, function() {
-		$(this).removeClass('weixinshowPic-hover');
-	});
-	$('.dropdown').hover(function() {
-		$(this).addClass('dropdown-hover');
-		$(".dropdown-sub").show('slow');
-	}, function() {
-		$(this).removeClass('dropdown-hover');
-	});	
-	
-});
+    $(document).ready(function () {
+
+        $('.weixinshowPic').hover(function () {
+            $(this).addClass('weixinshowPic-hover');
+        }, function () {
+            $(this).removeClass('weixinshowPic-hover');
+        });
+        $('.dropdown').hover(function () {
+            $(this).addClass('dropdown-hover');
+            $(".dropdown-sub").show('slow');
+        }, function () {
+            $(this).removeClass('dropdown-hover');
+        });
+
+    });
 </script>
 
 <div style="text-align:center;margin:150px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
-<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+    <p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+    <p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
 </div>
 </body>
 </html>

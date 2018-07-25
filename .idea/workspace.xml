@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ae0eea5-5eed-430c-b68b-8653a5083fcf" name="Default" comment="" />
+    <list default="true" id="3ae0eea5-5eed-430c-b68b-8653a5083fcf" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Html/Demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Html/Demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/JQuery/01Jquery顶级对象.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/JQuery/01Jquery顶级对象.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/JQuery/09标签加类选择器.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/JQuery/09标签加类选择器.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/JQuery/10多条件选择器.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/JQuery/10多条件选择器.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/JQuery/16又是选择器.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/JQuery/16又是选择器.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Other/01insertCell.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Other/01insertCell.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Other/02map.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Other/02map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Other/06Table-td遍历.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Other/06Table-td遍历.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Other/07REST与SOA的异同.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Other/07REST与SOA的异同.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/jquery_bind_on.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/jquery_bind_on.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/Demo1/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/Demo1/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/Demo1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/Demo1/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/Demo1/script/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/Demo1/script/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/Demo1/script/jquery.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/Demo1/script/jquery.min.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/Demo1/script/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/Demo1/script/jquery.slim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/Demo1/script/jquery.slim.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/Demo1/script/jquery.slim.min.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben3277/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben3277/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben3277/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben3277/说明.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben3797/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben3797/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben3797/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben3797/说明.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben3844/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben3844/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben3844/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben3844/说明.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben3880/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben3880/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben3880/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben3880/说明.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben3998/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben3998/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben3998/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben3998/说明.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4194/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4194/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4194/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4194/说明.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4303/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4303/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4303/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4303/说明.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4456/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4456/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4456/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4456/说明.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4603/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4603/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4603/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4603/说明.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4636/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4636/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4636/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4636/说明.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4676/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4676/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4676/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4676/说明.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4683/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4683/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/导航/jiaoben4683/说明.htm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/导航/jiaoben4683/说明.htm" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -12,8 +56,73 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="bind_on.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebApp/bind_on.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-827">
+              <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebApp/js/demo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2208" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Demo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebApp/Html/Demo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5313">
+              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="date.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebApp/js/date.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/WebApp/JQuery/01Jquery顶级对象.htm" />
+        <option value="$PROJECT_DIR$/WebApp/JQuery/09标签加类选择器.htm" />
+        <option value="$PROJECT_DIR$/WebApp/JQuery/10多条件选择器.htm" />
+        <option value="$PROJECT_DIR$/WebApp/JQuery/16又是选择器.htm" />
+        <option value="$PROJECT_DIR$/WebApp/Other/02map.html" />
+        <option value="$PROJECT_DIR$/WebApp/Other/01insertCell.html" />
+        <option value="$PROJECT_DIR$/WebApp/Other/07REST与SOA的异同.html" />
+        <option value="$PROJECT_DIR$/WebApp/Other/06Table-td遍历.html" />
+        <option value="$PROJECT_DIR$/WebApp/jquery_bind_on.html" />
+        <option value="$PROJECT_DIR$/WebApp/on_bind.html" />
+        <option value="$PROJECT_DIR$/WebApp/bind_on.html" />
+        <option value="$PROJECT_DIR$/WebApp/Html/Demo.html" />
+        <option value="$PROJECT_DIR$/WebApp/js/date.js" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -21,29 +130,26 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/WebApp/bower_components/bootstrap-fileinput/package.json" />
+      <path value="$PROJECT_DIR$/WebApp/bower_components/bootstrap/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="25" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -51,15 +157,35 @@
               <item name="Programming-in-Frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Programming-in-Frontend" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Programming-in-Frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Programming-in-Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="WebApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Programming-in-Frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Programming-in-Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="WebApp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\Project\Programming-in-Frontend\WebApp" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -73,8 +199,28 @@
       </list>
     </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="RunManager" selected="Node.js.date.js">
+    <configuration name="Demo.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Programming-in-Frontend/WebApp/Html/Demo.html" />
+    <configuration name="bind_on.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/Programming-in-Frontend/WebApp/bind_on.html" />
+    <configuration name="jquery_bind_on.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/Programming-in-Frontend/WebApp/jquery_bind_on.html" />
+    <configuration name="date.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="date.js" working-dir="$PROJECT_DIR$/WebApp/js" />
+    <list>
+      <item itemvalue="JavaScript Debug.jquery_bind_on.html" />
+      <item itemvalue="JavaScript Debug.bind_on.html" />
+      <item itemvalue="JavaScript Debug.Demo.html" />
+      <item itemvalue="Node.js.date.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.date.js" />
+        <item itemvalue="JavaScript Debug.Demo.html" />
+        <item itemvalue="JavaScript Debug.bind_on.html" />
+        <item itemvalue="JavaScript Debug.jquery_bind_on.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,31 +230,34 @@
       <option name="presentableId" value="Default" />
       <updated>1516334233101</updated>
       <workItem from="1516334234752" duration="20000" />
+      <workItem from="1531978123453" duration="2781000" />
+      <workItem from="1531985354934" duration="324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20000" />
+    <option name="totallyTimeSpent" value="3125000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="25" width="1400" height="1000" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" visible="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49947312" weight="0.3290461" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" weight="0.3290461" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49947312" weight="0.39978564" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,8 +266,126 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/WebApp/bind_on.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/A3/51_Bootstrap.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/JQuery/01Jquery顶级对象.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-155" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/JQuery/09标签加类选择器.htm">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/JQuery/10多条件选择器.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/JQuery/15为元素添加类样式.htm">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/JQuery/17过滤器.htm">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/JQuery/16又是选择器.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/JQuery/18练习.htm">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Other/02map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Other/01insertCell.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="25" selection-start-line="20" selection-start-column="27" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Other/07REST与SOA的异同.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Other/06Table-td遍历.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/jquery_bind_on.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="93" column="4" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/jquery_ajax.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/jquery_upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" selection-start-line="8" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/on_bind.html" />
+    <entry file="file://$PROJECT_DIR$/WebApp/ajax_html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/bind_on.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-827">
+          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2208" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Html/Demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5313">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/js/date.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

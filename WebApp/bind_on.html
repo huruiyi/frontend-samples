@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+
+
+            //$("input").on("hover",
+            //    function() {
+            //        $("#hidchangeBefore").val(this.value);
+            //    },
+            //    function() {
+            //        $("#hidchangeAfter").val(this.value);
+            //        if ($.trim($("#hidchangeBefore").val()) == $.trim($("#hidchangeAfter").val())) {
+            //            debugger;
+            //            $("#changeed").val(true);
+            //        }
+            //    });
+
+            
+            
+            //$(".editablenew").mouseover(function(){
+            //    $(".editablenew").css("background-color","yellow");
+            //});
+            //$(".editablenew").mouseout(function(){
+            //    $(".editablenew").css("background-color","#E9E9E4");
+            //});
+
+            
+            //$("input").on("mouseover mouseout",
+            //    function(event) {
+            //        if (event.type == "mouseover") {
+            //            console.log("mouseover");
+            //            //鼠标悬浮
+            //        } else if (event.type == "mouseout") {
+            //            //鼠标离开
+            //            console.log("mouseout");
+            //        }
+            //    });
+
+            
+
+            $(".infotext").on("blur",function () {
+                // alert("走好")
+            });
+            
+            //对于动态添加的元素,事件也是起作用的
+            $("#divText").on("blur","input", function() {
+                alert("走好")
+            });
+         
+            $("#btnAddText").on("click",function () {
+               $("#divText").append("<input type='text' class='infotext'/>")
+            });
+        })
+    </script>
+</head>
+<body>
+<div>
+    <input type="button" id="btnAddText" value="添加输入框"/>
+    <div id="divText">
+        <input type='text' class='infotext'/>
+        <input type='text' class='infotext'/>
+        <input type='text' class='infotext'/>
+    </div>
+</div>
+</body>
+</html>

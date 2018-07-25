@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
     // 菜单绑定事件
     initMenuListener();
     // 下拉菜单绑定事件
@@ -6,11 +6,12 @@ $(function() {
     // 下拉菜单颜色改变
     initSubMenuLiHover();
 });
+
 /**
  * 头部菜单绑定滑过事件
  */
 function initMenuListener() {
-    $(".menuli").hover(function() {
+    $(".menuli").hover(function () {
         var hideDivId = $(this).attr("id") + "_div";
         // 得到菜单的位置
         var left = $(this).offset().left;
@@ -19,28 +20,30 @@ function initMenuListener() {
         $("#" + hideDivId).show();
         $("#" + hideDivId).css("left", left);
         $("#" + hideDivId).css("top", top + height);
-    }, function() {
+    }, function () {
         // 将原来的菜单隐藏
         $(".display").hide();
     });
 }
+
 /**
  * 下拉菜单绑定事件
  */
 function initSubMenuHover() {
-    $(".display").hover(function() {
+    $(".display").hover(function () {
         $(this).show();
-    }, function() {
+    }, function () {
         $(this).hide();
     });
 }
+
 /**
  *  下拉菜单改变颜色
  */
 function initSubMenuLiHover() {
-    $(".redli").hover(function() {
+    $(".redli").hover(function () {
         $(this).addClass("redcolor");
-    }, function() {
+    }, function () {
         $(this).removeClass("redcolor");
     });
 }

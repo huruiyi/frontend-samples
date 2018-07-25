@@ -35,11 +35,11 @@
                 console.log($(this).text());
             });
 
-            $("#btn_SayHello1").on("click", { name: "Karl" }, greet);
+            $("#btn_SayHello1").on("click", {name: "Karl"}, greet);
 
-            $("#btn_SayHello2").on("click", { name: "Addy" }, greet);
+            $("#btn_SayHello2").on("click", {name: "Addy"}, greet);
 
-            $("#btn_Json_on_data").on("click", { foo: "bar", name: "foo_bar" }, myHandler);
+            $("#btn_Json_on_data").on("click", {foo: "bar", name: "foo_bar"}, myHandler);
 
 
             $("#parent").on("click", "input", function () {
@@ -62,88 +62,67 @@
             width: 150px;
             background-color: red;
         }
-
+        
         .entered {
             font-size: 20px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
         }
-
+        
         .pragr {
             width: 300px;
             height: 200px;
             background-color: royalblue;
         }
-
+        
         p.over {
             background-color: red;
         }
-
-        #dataTable {
-            border-collapse: collapse;
-        }
-
-        #dataTable td,
-        th {
-            border: 1px solid red;
-            width: 60px;
-            text-align: center;
-        }
+        
     </style>
 </head>
 
 <body>
-    <button class="btn btn-default" id="btn1">按钮1</button>
-    <div id="div_no_enter" class="">mouseenter-mouseleave</div>
-    <p class="pragr">Click or double click here.</p>
-    <p class="pragr_rep"></p>
+<div class="row">
+    <div class="col-4">
+    
+    </div>
+    <div class="col-4">
+    
+    </div>
+    <div class="col-4">
+    
+    </div>
+</div>
+<button class="btn btn-default" id="btn1">按钮1</button>
+<div id="div_no_enter" class="">mouseenter-mouseleave</div>
+<p class="pragr">Click or double click here.</p>
+<p class="pragr_rep"></p>
 
-    <table id="dataTable">
-        <thead>
-            <tr>
-                <th>A</th>
-                <th>B</th>
-                <th>C</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>A1</td>
-                <td>B1</td>
-                <td>C1</td>
-            </tr>
-            <tr>
-                <td>A2</td>
-                <td>B2</td>
-                <td>C2</td>
-            </tr>
-        </tbody>
-    </table>
+<button class="btn btn-default" id="btn_SayHello1">btn_SayHello1</button>
+<button class="btn btn-default" id="btn_SayHello2">btn_SayHello2</button>
+<button class="btn btn-default" id="btn_Json_on_data">btn_json_on</button>
 
-    <button class="btn btn-default" id="btn_SayHello1">btn_SayHello1</button>
-    <button class="btn btn-default" id="btn_SayHello2">btn_SayHello2</button>
-    <button class="btn btn-default" id="btn_Json_on_data">btn_json_on</button>
-
-    <fieldset>
-        <legend>on和bind差异</legend>
-        <div id="parent">
-            <input class="btn btn-default" type="button" value="a" id="a" />
-            <input class="btn btn-default" type="button" value="b" id="b" />
-            <input class="btn btn-default" type="button" value="c" id="c" />
-            <input class="btn btn-default" type="button" value="d" id="d" />
-        </div>
-        <div>
-            <p>on事件绑定的时候可以指定选择器的过滤条件</p>
-            <p>原理是事件冒泡，进行事件委托，子元素把事件委托给父元素进行事件处理；</p>
-            <p>无论增加多少子元素,都不用给每一个元素添加事件了</p>
-        </div>
-        <div>
-            <p>反之bind,每次添加子元素的时候都要重新绑定事件,相当麻烦</p>
-            参考:
-            <a href="http://api.jquery.com/on/">on的使用</a> 参考:
-            <a href="http://api.jquery.com/bind/">bind的使用</a>
-        </div>
-    </fieldset>
+<fieldset>
+    <legend>on和bind差异</legend>
+    <div id="parent">
+        <input class="btn btn-default" type="button" value="a" id="a"/>
+        <input class="btn btn-default" type="button" value="b" id="b"/>
+        <input class="btn btn-default" type="button" value="c" id="c"/>
+        <input class="btn btn-default" type="button" value="d" id="d"/>
+    </div>
+    <div>
+        <p>on事件绑定的时候可以指定选择器的过滤条件</p>
+        <p>原理是事件冒泡，进行事件委托，子元素把事件委托给父元素进行事件处理；</p>
+        <p>无论增加多少子元素,都不用给每一个元素添加事件了</p>
+    </div>
+    <div>
+        <p>反之bind,每次添加子元素的时候都要重新绑定事件,相当麻烦</p>
+        参考:
+        <a href="http://api.jquery.com/on/">on的使用</a> 参考:
+        <a href="http://api.jquery.com/bind/">bind的使用</a>
+    </div>
+</fieldset>
 </body>
 
 
