@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <style>
         * {
             margin: 0;
@@ -16,38 +16,40 @@
         }
 
         #menu {
-            width: 360px;
+            width: 468px;
             overflow: hidden;
             margin: 100px auto;
-            border: 1px solid #f1c40f;
+            padding: 2px;
+            border: 1px solid #e0a681;
+            border-collapse: collapse;
         }
 
-            #menu #nav {
-                display: block;
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                list-style: none;
-            }
+        #menu #nav {
+            display: block;
+            width: 100%;
+            list-style: none;
+            padding: 6px;
+        }
 
-                #menu #nav li {
-                    float: left;
-                    width: 120px;
-                }
+        #menu #nav li {
+            float: left;
+            width: 150px;
+            border: 1px solid rebeccapurple;
+        }
 
-                    #menu #nav li a {
-                        display: block;
-                        line-height: 27px;
-                        text-decoration: none;
-                        padding: 0 0 0 5px;
-                        text-align: center;
-                        color: #ba55d3;
-                    }
+        #menu #nav li a {
+            display: block;
+            line-height: 27px;
+            text-decoration: none;
+            padding: 0 0 0 5px;
+            text-align: center;
+            color: #ba55d3;
+        }
 
         #menu_con {
-            width: 358px;
-            height: 135px;
-            border-top: none;
+            margin-top: 25px;
+            height: 500px;
+            border: 1px solid orangered;
         }
 
         .tag {
@@ -92,7 +94,6 @@
                                 for (var j = 0; j < tabNum; j++) {
                                     if (i == j) {
                                         tabs[j].style.display = "block";
-                                        alert(elem[j].firstChild);
                                         elem[j].firstChild.className = "selected";
                                     } else {
                                         tabs[j].style.display = "none";
@@ -111,25 +112,25 @@
     </script>
 </head>
 <body>
-    <div id="menu">
-        <!--tag标题-->
-        <ul id="nav">
-            <li><a href="#" class="selected">jQuery特效</a></li>
-            <li><a href="#" class="">tab切换</a></li>
-            <li><a href="#" class="">菜单导航</a></li>
-        </ul>
-        <!--二级菜单-->
-        <div id="menu_con">
-            <div class="tag" style="display:block">
-                这里是jQuery特效内容列表
-            </div>
-            <div class="tag" style="display:none">
-                这里是tab切换效果
-            </div>
-            <div class="tag" style="display:none">
-                这里是菜单导航效果
-            </div>
+<div id="menu">
+    <!--tag标题-->
+    <ul id="nav">
+        <li><a href="#" class="selected">jQuery特效</a></li>
+        <li><a href="#" class="">tab切换</a></li>
+        <li><a href="#" class="">菜单导航</a></li>
+    </ul>
+    <!--二级菜单-->
+    <div id="menu_con">
+        <div class="tag" style="display:block">
+            这里是jQuery特效内容列表
+        </div>
+        <div class="tag" style="display:none">
+            这里是tab切换效果
+        </div>
+        <div class="tag" style="display:none">
+            这里是菜单导航效果
         </div>
     </div>
+</div>
 </body>
 </html>

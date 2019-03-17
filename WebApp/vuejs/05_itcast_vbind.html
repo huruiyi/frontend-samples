@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../bower_components/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <!--属性绑定通过 v-bind:property_name="data_name"
+        属性数据也会同步绑定-->
+    <h1 v-bind:title="message">Hello {{message}}</h1>
+
+    <!--属性绑定中 'message' 为 字符串,不会同步绑定 -->
+    <h1 v-bind:title="'message'">Hello {{message}}</h1>
+
+    <!--字符串 message, 不会双向绑定,app data 中message 的该表不会影响字符串的值-->
+    <h1>{{'message'}}</h1>
+
+    <h1>数字:{{12345679}}</h1>
+
+    <h1>
+        <!--error 属性绑定 需要用 v-bind -->
+        <!--<a href="{{url}}">{{name}}</a>-->
+
+        <!--ok-->
+        <a v-bind:href="url">{{name}}</a>
+
+        <!--ok 简写绑定方式 去掉 v-bind-->
+        <a :href="url">{{name}}</a>
+
+    </h1>
+</div>
+</body>
+<script type="text/javascript">
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: "world",
+            url: "http://www.baidu.com ",
+            name: "百度"
+        },
+        methods: {}
+    });
+</script>
+</html>
