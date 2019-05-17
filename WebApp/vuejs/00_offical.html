@@ -10,7 +10,7 @@
     <h2>{{product}} are in stock.</h2>
 </div>
 <div id="app1">
-    <ul>
+        <ul>
         <li v-for="product in products">
             {{product}}
         </li>
@@ -57,6 +57,12 @@
         }
     });
 
+
+    // {"products":[
+    // {"id":1,"quantity":1,"name":"Compass"},
+    // {"id":2,"quantity":0,"name":"Jacket"},
+    // {"id":3,"quantity":5,"name":"Hiking Socks"},
+    // {"id":4,"quantity":2,"name":"Suntan Lotion"}]}
     const app2 = new Vue({
         el: "#app2 ",
         data: {
@@ -70,7 +76,7 @@
             }
         },
         created() {
-            fetch('https://api.myjson.com/bins/74l63')
+            fetch('http://api.myjson.com/bins/74l63')
                 .then(response => response.json())
                 .then(json => {
                     this.products = json.products

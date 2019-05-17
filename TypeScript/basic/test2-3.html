@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function add(n) {
+        return n = n + 1;
+    }
+
+    alert(add(1));
+</script>
+
+<script>
+    function add(n) {
+        return n = n + 3;
+    }
+
+    alert(add(1));
+</script>
+
+
+<!--执行结果是什么呢？ 按照前面的知识，第一个 <script> 块执行正常，结果就是弹出 "function" 和 "A executed!" 的对话框。
+那么第二个 <script> 块呢？ 执行结果是弹出 "undefined" 的对话框后报 JS 错误，说 addB 不是一个 function。
+有点出乎意料？呵呵，其实第一个 script 块中的 addA 一句是函数声明，当然进行了"预编译"，
+但是第二个 script 块中的 addB 一句并非函数声明。只不过在执行这段 <script> 之前对变量进行了"预声明"，
+因此一开始变量addB是存在的，只不过是 undefined 的
+ 可参看http://eclipse07.javaeye.com/admin/blogs/484566 )。因此执行结果便如上面所示。 -->
+<script>
+    alert(typeof addA);
+    addA();
+    function addA() {
+        alert("A executed!");
+    };
+</script>
+<script>
+    alert(typeof addB);
+    addB();
+    var addB = function() {
+        alert("B executed!");
+    };
+</script>
+
+
+</body>
+</html>

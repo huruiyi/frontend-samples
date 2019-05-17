@@ -110,6 +110,9 @@
 <div class="example" id="app-6">
     <p>{{ message }}</p>
     <input v-model="message">
+    等价于
+    <input v-bind:value="message"
+           v-on:input="message = $event.target.value">
 </div>
 
 
