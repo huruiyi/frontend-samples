@@ -1,0 +1,13 @@
+{
+  "name": "WebApp",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "bootstrap": "^4.3.1",
+    "bootstrap-fileinput": "^5.0.3",
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1",
+    "vue": "^2.6.10",
+    "vue-route": "^1.5.1"
+  }
+}

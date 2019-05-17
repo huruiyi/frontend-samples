@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script>
         $(function () {
 
@@ -20,8 +20,8 @@
             //        }
             //    });
 
-            
-            
+
+
             //$(".editablenew").mouseover(function(){
             //    $(".editablenew").css("background-color","yellow");
             //});
@@ -29,7 +29,7 @@
             //    $(".editablenew").css("background-color","#E9E9E4");
             //});
 
-            
+
             //$("input").on("mouseover mouseout",
             //    function(event) {
             //        if (event.type == "mouseover") {
@@ -41,17 +41,17 @@
             //        }
             //    });
 
-            
+
 
             $(".infotext").on("blur",function () {
                 // alert("走好")
             });
-            
+
             //对于动态添加的元素,事件也是起作用的
             $("#divText").on("blur","input", function() {
                 alert("走好")
             });
-         
+
             $("#btnAddText").on("click",function () {
                $("#divText").append("<input type='text' class='infotext'/>")
             });
