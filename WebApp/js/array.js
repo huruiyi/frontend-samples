@@ -17,7 +17,7 @@ console.log(lists);
 
 function findvalue(list, value) {
     for (var i = 0; i < list.length; i++) {
-        if (list[i].data == value) {
+        if (list[i].data ===value) {
             return true;
         }
     }
@@ -26,7 +26,7 @@ function findvalue(list, value) {
 
 function SetListValue(list, value) {
     for (var i = 0; i < list.length; i++) {
-        if (list[i].data == value) {
+        if (list[i].data === value) {
             list[i].value = rowList[i].value + 1;
         }
     }
