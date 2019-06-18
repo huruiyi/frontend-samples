@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+
+<body>
+<div id="app3">
+    <my-component :object='object'></my-component>
+</div>
+
+<script type="text/javascript">
+    var mycom = Vue.component('my-component', {
+        //添加一个input改变子组件的childOject，那么父元素的object也会被改变，但是Vue没有报错！
+        template: '<p>{{ object.name }} is {{ object.age }} years old.<br><input v-model="childObject.name" type="text"></p>',
+        props: ['object', 'school'],
+        data: function () {
+            // 子组件的childObject 和 父组件的object 指向同一个对象
+            return {
+                childObject: this.object
+            }
+        }
+    });
+    var app3 = new Vue({
+        el: '#app3',
+        data: {
+            object: {
+                name: '胡大哥',
+                age: '28',
+            },
+            school: 'HKD',
+        },
+    })
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
