@@ -17,46 +17,46 @@ div#divfloatmenu {
     width: 200px;
 }
 
-    div#divfloatmenu ul {
-        margin: 0;
-        padding: 5px 5px;
-    }
+div#divfloatmenu ul {
+    margin: 0;
+    padding: 5px 5px;
+}
 
-        div#divfloatmenu ul li {
-            list-style: none;
-            background-color: #0078d7;
-            height: 25px;
-            line-height: 25px;
-            margin: 2px 5px;
-            border-radius: 18px;
-            padding: 0 10px;
-            font-size: 13px;
-        }
+div#divfloatmenu ul li {
+    list-style: none;
+    background-color: #0078d7;
+    height: 25px;
+    line-height: 25px;
+    margin: 2px 5px;
+    border-radius: 18px;
+    padding: 0 10px;
+    font-size: 13px;
+}
 
-            div#divfloatmenu ul li:hover {
-                background-color: mediumpurple;
-            }
+div#divfloatmenu ul li:hover {
+    background-color: mediumpurple;
+}
 
-            div#divfloatmenu ul li a {
-                color: white;
-            }
+div#divfloatmenu ul li a {
+    color: white;
+}
 
 fieldset {
     border: #0078d7 1px solid;
     margin-top: 7px;
 }
 
-    fieldset legend {
-        width: 200px;
-        text-align: center;
-        margin: 0 40%;
-        background-color: #0078d7;
-        color: white;
-        display: inline-block;
-        height: 22px;
-        font-size: 15px;
-        border-radius: 11px;
-    }
+fieldset legend {
+    width: 200px;
+    text-align: center;
+    margin: 0 40%;
+    background-color: #0078d7;
+    color: white;
+    display: inline-block;
+    height: 22px;
+    font-size: 15px;
+    border-radius: 11px;
+}
 
 #div-a {
     /*height: 60px;*/
@@ -87,21 +87,21 @@ fieldset {
     margin-top: -90px;
 }
 
-    #coverShow img {
-        margin: 0 auto;
-        height: 180px;
-        width: 240px;
-    }
+#coverShow img {
+    margin: 0 auto;
+    height: 180px;
+    width: 240px;
+}
 
 table {
     border-collapse: collapse;
 }
 
-    table td {
-        border: #0078d7 solid 1px;
-        width: 80px;
-        text-align: center;
-    }
+table td {
+    border: #0078d7 solid 1px;
+    width: 80px;
+    text-align: center;
+}
 
 div#divRotate {
     margin: 50px 50px 165px;
@@ -120,17 +120,21 @@ div.rotate_left {
     float: left;
     -ms-transform: rotate(7deg); /* IE 9 */
     -moz-transform: rotate(7deg);
-    /* Firefox */ -webkit-transform: rotate(7deg); /* Safari and Chrome */
+    /* Firefox */
+    -webkit-transform: rotate(7deg); /* Safari and Chrome */
     -o-transform: rotate(7deg);
-    /* Opera */ transform: rotate(29deg);
+    /* Opera */
+    transform: rotate(29deg);
 }
 
 div.rotate_right {
     float: left;
     -ms-transform: rotate(-8deg);
-    /* IE 9 */ -moz-transform: rotate(-8deg); /* Firefox */
+    /* IE 9 */
+    -moz-transform: rotate(-8deg); /* Firefox */
     -webkit-transform: rotate(-8deg);
-    /* Safari and Chrome */ -o-transform: rotate(-8deg); /* Opera */
+    /* Safari and Chrome */
+    -o-transform: rotate(-8deg); /* Opera */
     transform: rotate(-8deg);
 }
 
@@ -157,27 +161,27 @@ div.demorect {
     transform: rotate(45deg);
 }
 
-    div.demorect .fl {
-        width: 300px;
-        height: 145px;
-        background: #00cb99;
-    }
+div.demorect .fl {
+    width: 300px;
+    height: 145px;
+    background: #00cb99;
+}
 
-    div.demorect .fr {
-        width: 300px;
-        height: 145px;
-        margin-top: 10px;
-        background: #0093b4;
-    }
+div.demorect .fr {
+    width: 300px;
+    height: 145px;
+    margin-top: 10px;
+    background: #0093b4;
+}
 
-    div.demorect .pa {
-        position: absolute;
-        top: 75px;
-        left: 75px;
-        width: 150px;
-        height: 150px;
-        background-color: #f2f2f2;
-    }
+div.demorect .pa {
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    width: 150px;
+    height: 150px;
+    background-color: #f2f2f2;
+}
 
 input[type=button] {
     margin-left: 5px;
