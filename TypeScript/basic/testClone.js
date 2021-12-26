@@ -10,9 +10,9 @@ console.log(json1);
 console.log(json2);
 
 function clone(obj) {
-    var oNew = new obj.constructor(obj.valueOf());
+    const oNew = new obj.constructor(obj.valueOf());
     if (obj.constructor == Object) {
-        for (var i in obj) {
+        for (const i in obj) {
             oNew[i] = obj[i];
             if (typeof (oNew[i]) == 'object') {
                 clone(oNew[i]);
@@ -55,4 +55,4 @@ function clone(obj) {
  发送 send()
  当ajax对象完成第四步（onreadystatechange）数据接收完成，判断http响应状态（status）200-300之间或者304（缓存）执行回调函数
  */
-/
+
