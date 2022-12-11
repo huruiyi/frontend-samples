@@ -6,12 +6,12 @@
 
     <script>
         function ChangeVcode(obj) {
-            obj.src = "http://localhost/Handler/OtherHandler.ashx?action=Vcode1&mr" + Math.random()
+            obj.src = "http://localhost:40143/Handler/OtherHandler.ashx?action=Vcode1&mr" + Math.random()
         }
     </script>
 
 </head>
 <body>
-    <img src="http://localhost/Handler/OtherHandler.ashx?action=Vcode1" onclick="ChangeVcode(this)"/>
+    <img src="http://localhost:40143/Handler/OtherHandler.ashx?action=Vcode1" onclick="ChangeVcode(this)"/>
 </body>
 </html>
