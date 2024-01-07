@@ -3,10 +3,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Demo-Html练习汇总</title>
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../Js/demo.js"></script>
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-    <link href="../css/demo.css" rel="stylesheet" />
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/demo.js"></script>
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/demo.css" rel="stylesheet" />
 </head>
 <body>
     <div id="divfloatmenu">
@@ -30,17 +30,18 @@
             <li><a href="#fsregular">正则表达式</a></li>
             <li><a href="#fstexthtml">innerText和innerHTML</a></li>
             <li><a href="#fsjsonp">JSONP</a></li>
-
         </ul>
     </div>
     <fieldset id="fsalink">
         <legend>
             a标签
         </legend>
-        <a href="http://www.baidu.cn" onclick="alert(new Date().toLocaleTimeString());">百度1(会跳转)</a>
-        <a href="#" onclick="alert(new Date().toLocaleTimeString());">百度2</a>
-        <a href="javascript:void(0);" onclick="alert(new Date().toLocaleTimeString());">百度3</a>
-        <a href="javascript:alert(new Date().toLocaleTimeString());">百度4</a>
+        <div>
+            <a href="http://www.baidu.cn" onclick="alert(new Date().toLocaleTimeString());">百度1(会跳转)</a>
+            <a href="#" onclick="alert(new Date().toLocaleTimeString());">百度2</a>
+            <a href="javascript:void(0);" onclick="alert(new Date().toLocaleTimeString());">百度3</a>
+            <a href="javascript:alert(new Date().toLocaleTimeString());">百度4</a>
+        </div>
     </fieldset>
     <fieldset id="divfontcenter">
         <legend>居中显示</legend>
@@ -63,7 +64,7 @@
         </legend>
         <input type="text" name="name" value="1" id="txtInterval" />
         <input class="btn btn-outline-success btn-sm" type="button" value="定时器数数" onclick="Increase()" />
-        <input class="btn btn-outline-success btn-sm" type="button" id="btnsetTimeout" value="清理Timeout" onclick="clearTimeoutDemo()"/>
+        <input class="btn btn-outline-success btn-sm" type="button" id="btnsetTimeout" value="清理Timeout" onclick="clearTimeoutDemo()" />
         <input class="btn btn-outline-success btn-sm" type="button" id="btnsetInterval" value="清理Interval" onclick="clearIntervalDemo()" />
         <input class="btn btn-outline-success btn-sm" type="button" name="name" value="请仔细阅读协议(5)" id="btn" onclick="SetTimeOutReadme(this)" />
     </fieldset>
@@ -430,9 +431,9 @@
     </fieldset>
     <fieldset id="fsbd">
         <legend>
-            <a href="http://news.baidu.com/newscode.html">百度订阅新闻</a>
+            <a href="https://news.baidu.com/guonei/">百度订阅新闻</a>
         </legend>
-        <script language="JavaScript" type="text/JavaScript" src="http://news.baidu.com/n?cmd=1&class=mil&pn=1&tn=newsbrofcu"></script>
+        <script language="JavaScript" type="text/JavaScript"></script>
     </fieldset>
     <fieldset id="fskeywhich">
         <legend>keyCode和which </legend>
@@ -466,82 +467,82 @@
             </span>
         </div>
     </fieldset>
-<fieldset id="fsregular">
-    <legend>
-        正则表达式
-    </legend>
-    <div class="row">
-        <div class="col-2">
-            <select class="form-control" id="sltStr">
-                <option>123</option>
-                <option>一二三</option>
-            </select>
-        </div>
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="是否匹配" onclick="RegTest1()" />
-        </div>
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="循环匹配" onclick="RegTest2()" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-2">
-            <input class="form-control" type="text" id="txtEmail" value="" placeholder="请输入邮箱" />
-        </div>
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="邮箱匹配" onclick="RegTest3()" />
-        </div>
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="去首尾空格" onclick="RegTest4()" />
-        </div>
-        <div class="col-2">
-            <input class="form-control" type="text" name="name" value="请输入搜索关键词" style=" color:Gray;" id="txtregtext" />
-        </div>
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="大小写" onclick="RegTest5()" />
-        </div>
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="是否匹配" onclick="RegTest6()" />
-        </div>
-    </div>
-</fieldset>
-<fieldset id="fstexthtml">
-    <legend>innerText和innerHTML</legend>
-    <div class="row">
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="设置innerText" onclick="SetinnerText()" />
-        </div>
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="设置innerHTML" onclick="SetinnerHTML()" />
-        </div>
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="显示innerText" onclick="ShowinnerText()" />
-        </div>
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="显示innerHTML" onclick="ShowinnerHTML()" />
-        </div>
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="设置textContent(火狐)" onclick="SettextContentfirefox()" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <div id="divTextHtml" style=" width:90%; height:50px; border:1px solid red;">
+    <fieldset id="fsregular">
+        <legend>
+            正则表达式
+        </legend>
+        <div class="row">
+            <div class="col-2">
+                <select class="form-control" id="sltStr">
+                    <option>123</option>
+                    <option>一二三</option>
+                </select>
+            </div>
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="是否匹配" onclick="RegTest1()" />
+            </div>
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="循环匹配" onclick="RegTest2()" />
             </div>
         </div>
-    </div>
-</fieldset>
+        <div class="row">
+            <div class="col-2">
+                <input class="form-control" type="text" id="txtEmail" value="" placeholder="请输入邮箱" />
+            </div>
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="邮箱匹配" onclick="RegTest3()" />
+            </div>
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="去首尾空格" onclick="RegTest4()" />
+            </div>
+            <div class="col-2">
+                <input class="form-control" type="text" name="name" value="请输入搜索关键词" style=" color:Gray;" id="txtregtext" />
+            </div>
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="大小写" onclick="RegTest5()" />
+            </div>
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="是否匹配" onclick="RegTest6()" />
+            </div>
+        </div>
+    </fieldset>
+    <fieldset id="fstexthtml">
+        <legend>innerText和innerHTML</legend>
+        <div class="row">
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="设置innerText" onclick="SetinnerText()" />
+            </div>
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="设置innerHTML" onclick="SetinnerHTML()" />
+            </div>
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="显示innerText" onclick="ShowinnerText()" />
+            </div>
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="显示innerHTML" onclick="ShowinnerHTML()" />
+            </div>
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="设置textContent(火狐)" onclick="SettextContentfirefox()" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div id="divTextHtml" style=" width:90%; height:50px; border:1px solid red;">
+                </div>
+            </div>
+        </div>
+    </fieldset>
 
-<fieldset id="fsjsonp">
-    <legend>JSONP</legend>
-    <div class="row">
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="GetJsonPName" onclick="GetJsonPName()" />
+    <fieldset id="fsjsonp">
+        <legend>JSONP</legend>
+        <div class="row">
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="GetJsonPName" onclick="GetJsonPName()" />
+            </div>
+            <div class="col-2">
+                <input class="form-control btn btn-outline-success btn-sm" type="button" value="GetJsonPMsg" onclick="GetJsonPMsg()" />
+            </div>
         </div>
-        <div class="col-2">
-            <input class="form-control btn btn-outline-success btn-sm" type="button" value="GetJsonPMsg" onclick="GetJsonPMsg()" />
-        </div>
-    </div>
-</fieldset>
+    </fieldset>
 </body>
 </html>

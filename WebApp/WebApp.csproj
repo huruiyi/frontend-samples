@@ -77,7 +77,7 @@
     <Content Include="front\algorithms\sorting\selection_sort.js" />
     <Content Include="front\call-apply\applySamples.js" />
     <Content Include="front\call-apply\callSamples.js" />
-    <Content Include="front\css\demo.css" />
+    <Content Include="front\Html\css\demo.css" />
     <Content Include="front\form-api\1.html" />
     <Content Include="front\Html5\1绘制简单矩形、填充矩形.html" />
     <Content Include="front\Html5\2绘制圆形.html" />
@@ -11198,7 +11198,7 @@
     <Content Include="templates\Date\img\sample.png" />
     <Content Include="templates\Date\index.html" />
     <Content Include="templates\Date\js\script.js" />
-    <Content Include="templates\demo.js" />
+    <Content Include="front\Html\js\demo.js" />
     <Content Include="templates\Dividing string in code\img\sample.png" />
     <Content Include="templates\Dividing string in code\index.html" />
     <Content Include="templates\Dividing string in code\js\script.js" />
