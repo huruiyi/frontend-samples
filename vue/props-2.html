@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+
+<body>
+<div id="app2">
+  <!-- hello引用父元素的hello，它也可以引用message,greet，world等 -->
+  <child hello='你好!世界'></child>
+</div>
+
+<script type="text/javascript">
+  var com1 = Vue.component('child', {
+    // 声明在prop中的变量可以引用父元素的数据
+    props : [ 'hello' ],
+    // 这里渲染props中声明的那个hello
+    template : '<div><p>{{ hello }}</p></div>',
+  })
+
+  var app2 = new Vue({
+    el : '#app2',
+    data : {
+      greet : {
+        hello : 'hello,',
+        world : 'world',
+      },
+      message : 'message1',
+    }
+  })
+
+</script>
+</body>
+
+</html>
+
+
+
+
+
+

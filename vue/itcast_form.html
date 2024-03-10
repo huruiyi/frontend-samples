@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="node_modules/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div id="app1" class="container">
+  <div class="form-control">
+    <!--文本框-->
+    <!--单项绑定,文本框值的变换不会影响app data中的数据-->
+    <input type="text" :value="message">
+
+    <!--双向绑定, 文本框中值的变化会影响 app data中的数据-->
+    <input type="text" v-model="message">
+  </div>
+  <div class="form-control">
+    <!--????-->
+    <textarea>{{ message }}</textarea>
+    <!--双向绑定-->
+    <textarea v-model="message"> </textarea>
+  </div>
+  <div class="form-control">
+    <!--checked-->
+    <input type="checkbox" id="checkbox" v-model="ischecked">
+    <label for="checkbox">记住密码:{{ ischecked }}</label>
+  </div>
+  <div class="form-control">
+    <input type="radio" id="one" value="One" v-model="picked">
+    <label for="one">One</label>
+    <br>
+    <input type="radio" id="two" value="Two" v-model="picked">
+    <label for="two">Two</label>
+    <br>
+    <span>单选项: {{ picked }}</span>
+  </div>
+  <div class="form-control">
+    <!--复选框-->
+    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+    <label for="jack">Jack</label>
+    <input type="checkbox" id="john" value="John" v-model="checkedNames">
+    <label for="john">John</label>
+    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+    <label for="mike">Mike</label>
+    <br>
+    <span>复选项: {{ checkedNames }}</span>
+  </div>
+  <div class="form-control">
+    <!--下拉框单选-->
+    <select v-model="selected">
+      <option disabled value="">请选择</option>
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+    </select>
+    <br>
+    <span>Selected: {{ selected }}</span>
+
+  </div>
+  <div class="form-control">
+    <!--下拉框多选-->
+    <select v-model="mul_selected" multiple style="width: 50px;">
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+    </select>
+    <br>
+    <span>Selected: {{ mul_selected }}</span>
+  </div>
+</div>
+<div id="app2" class="container">
+  <div class="form-control">
+    <!--动态绑定-->
+    <select v-model="selected">
+      <option v-for="option in options" v-bind:value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+    <span>Selected: {{ selected }}</span>
+  </div>
+</div>
+</body>
+
+<script type="text/javascript">
+  var app1 = new Vue({
+    el : "#app1",
+    data : {
+      message : "World!",
+      ischecked : true,
+      checkedNames : [],
+      picked : '',
+      selected : '',
+      mul_selected : []
+    },
+    methods : {}
+  });
+
+  var app2 = new Vue({
+    el : "#app2",
+    data : {
+      selected : 'A',
+      options : [
+        { text : 'One', value : 'A' },
+        { text : 'Two', value : 'B' },
+        { text : 'Three', value : 'C' }
+      ]
+    }
+  });
+</script>
+</html>

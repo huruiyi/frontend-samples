@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Music</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#/find.html">发现音乐</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#/my.html">我的音乐</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#/friend.html">朋友</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#/musicp.html">音乐人</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 btn-sm" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</div>
+<div class="container" id="container">
+
+</div>
+<script type="text/html" id="musicpcontent">
+  <!--内置Html, 当Html过大时,导致首次加载过慢, 可采用异步加载-->
+  <div class="alert alert-secondary" role="alert">
+    This is a primary alert with <a href="#" class="alert-link">an example link</a>. 音乐人!!!!
+  </div>
+</script>
+<script type="text/javascript">
+  hashchangeHandler();
+  window.onhashchange = hashchangeHandler;
+
+  function hashchangeHandler() {
+    var hash = window.location.hash;
+    var pathname = hash.substr(1);
+    // console.log(pathname);
+    // console.log(arguments.length + " " + arguments[0] + " " + typeof  arguments[0]);
+    // console.log(arguments[0]);
+    if (pathname === '/') {
+      console.log("/");
+    } else if (pathname === "/my.html") {
+      $.ajax({
+        url : "./my.html",
+        type : "get",
+        success : function (data) {
+          $("#container").html(data);
+        }
+      })
+    } else if (pathname == '/friend.html') {
+      $.get("./friend.html", function (data) {
+        $("#container").html(data);
+      });
+    } else if (pathname === '/find.html') {
+      $.get("./find.html", function (data) {
+        $("#container").html(data);
+      });
+    } else if (pathname === '/musicp.html') {
+      $("#container").html($("#musicpcontent").html());
+    } else {
+
+    }
+  }
+</script>
+</body>
+</html>
