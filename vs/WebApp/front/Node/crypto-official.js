@@ -150,6 +150,5 @@ function test15() {
 
     console.log(encrypted.toString())
     const decryptedData = decrypted.toString(CryptoJS.enc.Utf8);
-    console.log(decryptedData);}
-
-test15()
+    console.log(decryptedData);
+}
