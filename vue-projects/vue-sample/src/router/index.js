@@ -1,13 +1,14 @@
 import {createRouter, createWebHistory} from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import toDoListView1 from "../views/ToDoListView1.vue";
-import ToDoListView2 from "../views/ToDoListView2.vue";
+import HomeView from '@/views/HomeView.vue'
+import toDoListView1 from "@/views/ToDoListView1.vue";
+import ToDoListView2 from "@/views/ToDoListView2.vue";
 
-import FetchViewV1 from "../views/FetchViewV1.vue";
-import FetchViewV2 from "../views/FetchViewV2.vue";
+import FetchViewV1 from "@/views/FetchViewV1.vue";
+import FetchViewV2 from "@/views/FetchViewV2.vue";
 
-import FormView from "../views/FormView.vue";
-import WatchView from "../views/WatchView.vue";
+import FormView from "@/views/FormView.vue";
+import WatchView from "@/views/WatchView.vue";
+import DebouncedView from "@/views/DebouncedView.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,9 +51,14 @@ const router = createRouter({
                 component: WatchView
             },
             {
+                path: '/debounced',
+                name: 'debounced',
+                component: DebouncedView
+            },
+            {
                 path: '/about',
                 name: 'about',
-                component: () => import('../views/AboutView.vue')
+                component: () => import('@/views/AboutView.vue')
                 // route level code-splitting
                 // this generates a separate chunk (About.[hash].js) for this route
                 // which is lazy-loaded when the route is visited.
