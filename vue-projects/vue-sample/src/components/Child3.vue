@@ -1,11 +1,9 @@
 <template>
   <div>
-    <div>
-      <h1>子组件</h1>
-      <p>下面是父组件传过来的数据</p>
-      <p>第一个数据：{{ fData }}</p>
-      <p>第二个数据：{{ fMessage }}</p>
-    </div>
+    <h3>子组件3</h3>
+    <p>下面是父组件传过来的数据</p>
+    <p>第一个数据：{{ fData }}</p>
+    <p>第二个数据：{{ fMessage }}</p>
   </div>
 </template>
 
@@ -18,8 +16,13 @@ defineProps({
 </script>
 
 <style scoped>
+h3 {
+  color: hsla(160, 100%, 37%, 1)
+}
+
 div {
   margin: 5px 0;
-  background-color: beige;
+  padding: 5px;
+  background-color: antiquewhite
 }
 </style>

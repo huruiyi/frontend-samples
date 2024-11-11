@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div>
-      <h1>子组件5</h1>
-      <button @click="parentDo">调用父组件方法</button>
-    </div>
+    <h3>子组件5</h3>
+    <button @click="parentDo">调用父组件方法</button>
   </div>
 </template>
 
@@ -23,8 +21,13 @@ onMounted(() => {
 </script>
 
 <style scoped>
+h3 {
+  color: hsla(160, 100%, 37%, 1)
+}
+
 div {
   margin: 5px 0;
-  background-color: beige;
+  padding: 5px;
+  background-color: antiquewhite
 }
 </style>

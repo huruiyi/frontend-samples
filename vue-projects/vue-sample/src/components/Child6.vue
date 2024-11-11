@@ -1,10 +1,8 @@
 <template>
   <div>
-    <div>
-      <h1>子组件6</h1>
-      <div title="Title" :visible="visible" :confirm-loading="confirmLoading" @ok="handleOk">
-        <p>{{ modalText }}</p>
-      </div>
+    <h1>子组件6</h1>
+    <div title="Title" :visible="visible" :confirm-loading="confirmLoading" @ok="handleOk">
+      <p>{{ modalText }}</p>
     </div>
   </div>
 </template>
@@ -41,10 +39,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped>
-div {
-  margin: 5px 0;
-  background-color: beige;
-}
-</style>
