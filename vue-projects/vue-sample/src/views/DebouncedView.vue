@@ -10,7 +10,3 @@ const text = useDebouncedRef('hello', 1000)
   <p>{{ text }}</p>
   <input v-model="text" />
 </template>
-
-<style scoped>
-
-</style>
