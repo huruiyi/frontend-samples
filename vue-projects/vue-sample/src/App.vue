@@ -18,6 +18,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/form">Form</RouterLink>
         <RouterLink to="/watch">Watch</RouterLink>
         <RouterLink to="/debounced">Debounced</RouterLink>
+        <RouterLink to="/demo1">demo1</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>

@@ -9,6 +9,7 @@ import FetchViewV2 from "@/views/FetchViewV2.vue";
 import FormView from "@/views/FormView.vue";
 import WatchView from "@/views/WatchView.vue";
 import DebouncedView from "@/views/DebouncedView.vue";
+import UserChild1 from "@/views/UseChild.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -54,6 +55,11 @@ const router = createRouter({
                 path: '/debounced',
                 name: 'debounced',
                 component: DebouncedView
+            },
+            {
+                path: '/demo1',
+                name: 'demo1',
+                component: UserChild1
             },
             {
                 path: '/about',
