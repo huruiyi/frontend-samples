@@ -10,12 +10,7 @@ const child1Ref = ref(null);
 const child4Ref = ref(null);
 const child5Ref = ref(null);
 
-
 const PROVIDE_NAME = 'child5'
-
-function func() {
-  alert("func..")
-}
 
 provide(PROVIDE_NAME, child5Ref);
 provide(`${PROVIDE_NAME}/func`, func);
@@ -23,6 +18,7 @@ provide(`${PROVIDE_NAME}/func`, func);
 const child1Do = () => {
   child1Ref.value.hello("大爷")
 }
+
 const child4Do = () => {
   child4Ref.value.doSth({
     id: 1,
@@ -43,6 +39,10 @@ const parentDo1 = (data) => {
 
 const parentDo2 = (data) => {
   alert(data)
+}
+
+function func() {
+  alert("func..")
 }
 </script>
 
