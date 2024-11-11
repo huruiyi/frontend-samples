@@ -5,7 +5,6 @@
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.6",
-    "vuejs": "^3.0.1"
+    "vue-router": "^3.0.6"
   }
 }
