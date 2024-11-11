@@ -16,7 +16,7 @@ export default {
     }
   },
   mounted() {
-    this.date=moment()
+    this.date = moment()
   }
 }
 </script>
