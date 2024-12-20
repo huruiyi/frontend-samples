@@ -1,4 +1,6 @@
 <script setup>
+import '../assets/child.css'
+
 import {provide, ref} from "vue";
 import Child1 from "@/components/Child1.vue";
 import Child2 from "@/components/Child2.vue";
@@ -72,29 +74,3 @@ function func() {
   </div>
 
 </template>
-
-<style scoped>
-
-.s-button {
-  background-color: #1795bb;
-  border-radius: 6px;
-  border: none;
-  color: white;
-  padding: 6px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 2px 1px;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.s-button:hover {
-  background-color: #fff;
-  color: #1795bb;
-  border: 1px solid #ccc;
-}
-
-</style>

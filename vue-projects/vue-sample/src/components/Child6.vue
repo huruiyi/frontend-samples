@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="child-div">
     <h1>子组件6</h1>
     <div title="Title" :visible="visible" :confirm-loading="confirmLoading" @ok="handleOk">
       <p>{{ modalText }}</p>
