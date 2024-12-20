@@ -23,6 +23,8 @@ h3 {
 div {
   margin: 5px 0;
   padding: 5px;
-  background-color: antiquewhite
+  background-color: white;
+  border: 1px solid hsla(160, 100%, 37%, 1);
+  border-radius: 15px;
 }
 </style>

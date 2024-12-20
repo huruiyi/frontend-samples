@@ -2,7 +2,7 @@
   <div>
     <h3>子组件0</h3>
     <p>Count: {{ count }}</p>
-    <button @click="childEvent">child0 add</button>
+    <button class="s-button" @click="childEvent">child0 add</button>
   </div>
 
 </template>
@@ -31,6 +31,31 @@ h3 {
 div {
   margin: 5px 0;
   padding: 5px;
-  background-color: antiquewhite
+  background-color: white;
+  border: 1px solid hsla(160, 100%, 37%, 1);
+  border-radius: 15px;
+}
+
+
+.s-button {
+  background-color: #1795bb;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 1px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.s-button:hover {
+  background-color: #fff;
+  color: #1795bb;
+  border: 1px solid #ccc;
 }
 </style>

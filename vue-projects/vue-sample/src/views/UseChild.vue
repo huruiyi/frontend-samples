@@ -55,27 +55,46 @@ function func() {
 
 <template>
   <div>
-
-
     <Child0 ref="child0Ref"/>
-    <button @click="childAdd">父组件调用child0-子组件</button>
+    <button class="s-button" @click="childAdd">父组件调用child0-子组件</button>
 
     <Child1 ref="child1Ref" info="曹操" money="666"/>
-    <button @click="child1Do">父组件调用child1-子组件</button>
+    <button class="s-button" @click="child1Do">父组件调用child1-子组件</button>
 
     <Child2 @refresh="getUserList"/>
 
     <Child3 f-data="hello" f-message="world"/>
 
     <Child4 ref="child4Ref" @parent-mut="parentDo1" @response-single="parentDo2"/>
-    <button @click="child4Do">父组件调用child4-子组件</button>
+    <button class="s-button" @click="child4Do">父组件调用child4-子组件</button>
 
     <Child5 ref="child5Ref"/>
-
   </div>
 
 </template>
 
 <style scoped>
+
+.s-button {
+  background-color: #1795bb;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 1px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.s-button:hover {
+  background-color: #fff;
+  color: #1795bb;
+  border: 1px solid #ccc;
+}
 
 </style>
