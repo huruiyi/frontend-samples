@@ -1,6 +1,6 @@
-import {createApp} from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-import {createRouter, createWebHashHistory} from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import HelloWorld from "@/components/HelloWorld";
 import About from "@/components/About";
 
