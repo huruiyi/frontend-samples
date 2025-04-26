@@ -19,7 +19,8 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/watch">Watch</RouterLink>
         <RouterLink to="/debounced">防抖</RouterLink>
         <RouterLink to="/demo1">组件通讯</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/emoji">Emoji</RouterLink>
+        <RouterLink to="/about">关于</RouterLink>
       </nav>
     </div>
   </header>
