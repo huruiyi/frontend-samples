@@ -2,10 +2,10 @@
   <div class="layout">
     <Layout :style="{minHeight: '99vh'}">
       <Sider ref="side1" hide-trigger collapsible :collapsed-width="80" v-model="isCollapsed">
-        <Menu theme="light" active-name="" width="auto" :class="menuitemClasses">
+        <Menu theme="light" active-name="" width="auto" :class="menuitemClasses" >
           <Submenu name="1">
             <template slot="title">
-              <Icon type="ios-paper"/>
+              <Icon type="ios-paper" />
               <span>知识点</span>
             </template>
             <MenuItem name="1-1" @click.native="handleUrl('/page0')">
@@ -51,7 +51,7 @@
         <Content :style="{margin: '10px', background: '#fff', minHeight: '260px'}">
           <div>
             <div style="position: relative">
-              <router-view/>
+              <router-view />
             </div>
           </div>
         </Content>
@@ -62,13 +62,13 @@
 
 <script>
 export default {
-  name: 'MainFrame',
+  name : 'MainFrame',
   data() {
     return {
-      isCollapsed: false
+      isCollapsed : false
     }
   },
-  computed: {
+  computed : {
     rotateIcon() {
       return [
         'menu-icon',
@@ -82,7 +82,7 @@ export default {
       ]
     }
   },
-  methods: {
+  methods : {
     collapsedSider() {
       this.$refs.side1.toggleCollapse()
     },
@@ -90,7 +90,7 @@ export default {
       console.log(url)
       if (this.currentUrl !== url) {
         this.currentUrl = url
-        this.$router.push({path: url})
+        this.$router.push({ path : url })
       }
     }
   }

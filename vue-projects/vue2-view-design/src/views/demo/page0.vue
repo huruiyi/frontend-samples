@@ -1,30 +1,39 @@
 <template>
-    <Card v-if="!isEditMode">
+  <Card v-if="!isEditMode">
 
-        <p slot="title">
-            <Icon type="ios-cube-outline"/>
-            集合循环和自定义组件
-        </p>
+    <p slot="title">
+      <Icon type="ios-cube-outline" />
+      集合循环和自定义组件
+    </p>
 
-        <Lists></Lists>
+    <Lists></Lists>
 
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
-    </Card>
+    <HelloWorld p-msg="haha" msg="Welcome to Your Vue.js App" />
+
+    <say-hello :who="who"></say-hello>
+    <h2>{{ page0P1 }}</h2>
+  </Card>
 </template>
 
 <script>
 import HelloWorld from '@/components/HelloWorld.vue'
 import Lists from '@/components/Lists.vue'
+import SayHello from "@/components/SayHello.vue";
 
 export default {
-  name: 'page0',
-  components: {
-    Lists,
-    HelloWorld
+  name : 'page0',
+  props : {
+    page0P1 : String
   },
-  data: function () {
+  components : {
+    Lists,
+    HelloWorld,
+    SayHello
+  },
+  data : function () {
     return {
-      isEditMode: false
+      who : 'vue:say-hello',
+      isEditMode : false
     }
   }
 }

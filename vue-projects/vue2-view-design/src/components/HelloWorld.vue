@@ -21,15 +21,29 @@
         </li>
       </ul>
     </Card>
+    <Card>
+      <h1>{{ msg }}</h1>
+      <h2>{{ pMsg }}</h2>
+    </Card>
+
+    <Card>
+      <user-info/>
+    </Card>
   </div>
 
 </template>
 
 <script>
+import UserInfo from "@/components/UserInfo.vue";
+
 export default {
   name : 'HelloWorld',
-
+  components : { UserInfo },
+  props : {
+    pMsg : String
+  },
   data : () => ({
+    msg : 'Welcome to Your Vue.js App',
     ecosystem : [
       {
         text : 'vuetify-loader',

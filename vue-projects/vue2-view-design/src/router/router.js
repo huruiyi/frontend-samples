@@ -20,7 +20,10 @@ export default new VueRouter({
       children : [
         {
           path : '/page0',
-          component : () => import('../views/demo/page0.vue')
+          component : () => import('../views/demo/page0.vue'),
+          props : {
+            page0P1 : 'Hello World'
+          }
         },
         {
           path : '/page1',
