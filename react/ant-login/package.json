@@ -10,11 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
     "@ant-design/icons": "^6.0.0",
     "@ant-design/pro-components": "^2.8.9",
-    "antd": "^5.26.2"
+    "antd": "^5.26.2",
+    "react": "^19.1.0",
+    "react-activation": "^0.13.4",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
