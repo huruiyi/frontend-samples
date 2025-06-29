@@ -1,42 +1,13 @@
 import { PageContainer, ProLayout } from "@ant-design/pro-components";
-import ProductPage from "./pages/product/ProductPage.tsx";
-import UserPage from "./pages/system/user/UserPage.tsx";
 import { useState } from "react";
 import { DashboardPage } from "./pages/system/home/Dashboard.tsx";
-import { DashboardOutlined, ProductOutlined, UserOutlined } from "@ant-design/icons";
 import { KeepAlive } from "react-activation";
+import { Tabs } from "antd";
+import route from "./route.tsx";
 
 const App = () => {
   const menuHeaderRender = () => <div>我是你大爷</div>;
   const menuFooterRender = () => <div>我是你祖宗</div>;
-
-  // 定义菜单数据
-  const menuData = {
-    path: '/',
-    routes: [
-      {
-        icon: <DashboardOutlined />,
-        path: '/dashboard',
-        name: '控制台',
-        component: DashboardPage,
-        key: 'dashboard'
-      },
-      {
-        icon: <UserOutlined />,
-        path: '/user',
-        name: '用户管理',
-        component: UserPage,
-        key: 'user'
-      },
-      {
-        icon: <ProductOutlined />,
-        path: '/product',
-        name: '产品管理',
-        component: ProductPage,
-        key: 'product'
-      },
-    ]
-  };
 
   const [ activeKey, setActiveKey ] = useState('dashboard');
   const [ tabs, setTabs ] = useState([
@@ -73,11 +44,43 @@ const App = () => {
     );
   };
 
+  // 自定义页面头部渲染函数
+  const tabRender = () => {
+    return (
+        <Tabs
+            activeKey={ activeKey }
+            onChange={ setActiveKey }
+            type="editable-card"
+            tabBarStyle={ {
+              height: 50,
+              lineHeight:50,
+              backgroundColor: '#f0f2f5',
+              borderBottom: '1px solid #e8e8e8',
+              paddingBottom: 0
+            } }
+            tabBarGutter={ 10 }
+            onEdit={ (targetKey, action) => {
+              // 处理标签页关闭逻辑
+              if (action === 'remove') {
+                setTabs(prev => prev.filter(tab => tab.key !== targetKey));
+                // 如果关闭了当前激活的标签，切换到第一个标签
+                if (targetKey === activeKey && tabs.length > 1) {
+                  setActiveKey(tabs[0].key);
+                }
+              }
+            } }
+        >
+          { tabs.map(tab => (
+              <Tabs.TabPane   tab={ tab.tab } key={ tab.key } closable={ tab.key !== 'dashboard' } />
+          )) }
+        </Tabs>
+    );
+  };
 
   return (
       <ProLayout
           title="钣金MES"
-          route={ menuData }
+          route={ route }
           location={ { pathname: `/${ activeKey }` } }
           menuItemRender={ (item, dom) => (
               <a onClick={ () => handleMenuClick(item) }>
@@ -85,38 +88,15 @@ const App = () => {
               </a>
           ) }
           layout="mix"
-          contentStyle={ { backgroundColor: "pink" } }
           menuHeaderRender={ menuHeaderRender }
           menuFooterRender={ menuFooterRender }
-          breadcrumbRender={ () => [ { path: '/dashboard', breadcrumbName: '控制台' } ] }
           headerContentRender={ () => <div>headerContentRender</div> }
       >
         <PageContainer
-
-            header={ {
-              ghost: true
-            } }
-            tabList={ tabs.map(tab => ( {
-              tab: tab.tab,
-              key: tab.key
-            } )) }
-            tabProps={ {
-              style: {
-                backgroundColor: 'red', padding: 0, margin: 0, height: 40, marginLeft: -5,
-
-              },
-              type: "editable-card",
-              tabBarStyle: {
-                backgroundColor: '#f0f2f5', // 标签栏背景色
-                borderBottom: '1px solid #e8e8e8', // 底部边框
-              },
-              tabBarGutter: 10,
-            } }
-            tabActiveKey={ activeKey }
-            onTabChange={ setActiveKey }
-            title={ false }
-            childrenContentStyle={ { padding: 5, backgroundColor: "green" } }
-        >
+            pageHeaderRender={ tabRender }
+            childrenContentStyle={ {
+              padding: 10, margin: 0
+            } }>
           { renderTabContent() }
         </PageContainer>
       </ProLayout>

@@ -23,7 +23,7 @@ const DashboardPage = () => {
       <Row>
         <Col span={ 6 }>
           <Card title="今日生产订单" extra={ <a href="#">共12个订单</a> } variant="outlined"
-                style={ { marginLeft: "5px", marginRight: "5px", height: "92vh" } }>
+                style={ { marginLeft: "5px", marginRight: "5px", height: "85vh" } }>
             <p>Card content</p>
             <p>Card content</p>
             <p>Card content</p>
@@ -35,7 +35,7 @@ const DashboardPage = () => {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span style={ { backgroundColor: "#22c55E", "borderRadius": "15px" } }>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><label>异常</label>
             </p> } variant="outlined"
-                style={ { marginLeft: "5px", marginRight: "5px", height: "92vh" } }>
+                style={ { marginLeft: "5px", marginRight: "5px", height: "85vh" } }>
 
             <List
                 split={ false }
@@ -76,7 +76,6 @@ const DashboardPage = () => {
                             />
                           </Col>
                         </Row>
-
                       </Card>
                     </List.Item>
                 ) }
@@ -85,7 +84,7 @@ const DashboardPage = () => {
         </Col>
         <Col span={ 5 }>
           <Card title="预警通知" extra={ <a href="#">5个待处理</a> } variant="outlined"
-                style={ { marginLeft: "5px", marginRight: "5px", height: "92vh" } }>
+                style={ { marginLeft: "5px", marginRight: "5px", height: "85vh" } }>
             <p>Card content</p>
             <p>Card content</p>
             <p>Card content</p>
