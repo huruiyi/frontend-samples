@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  </script>
+</head>
+<body>
+<input type="file" id="fileInput" accept="*">
+
+<div id="dropArea" style="width: 300px; height: 200px; border: 2px dashed #ccc;">
+  拖拽文件到这里
+</div>
+
+<canvas id="myCanvas" width="200" height="200"></canvas>
+<button id="saveBtn">生成图像 Blob</button>
+
+<button onclick="downloadFileAsBlob('https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.19_250904_mips64el_01.deb')">下载QQ</button>
+</body>
+<script type="module">
+  import { identifyImageFormat, downloadFileAsBlob } from './07.js';
+
+  window.downloadFileAsBlob = downloadFileAsBlob;
+
+  const fileInput = document.getElementById('fileInput');
+
+  fileInput.addEventListener('change', (e) => {
+    // 获取用户选择的第一个文件（File 对象，继承自 Blob）
+    const fileBlob = e.target.files[0];
+
+    if (fileBlob) {
+      identifyImageFormat(fileBlob).then(format => console.log("图片格式：", format));
+
+      console.log('获取到文件 Blob：', fileBlob);
+      console.log('文件大小：', fileBlob.size, '字节');
+      console.log('文件类型：', fileBlob.type);
+
+      // 可直接当作 Blob 使用（例如转换为 ArrayBuffer）
+      fileBlob.arrayBuffer().then(buffer => {
+        console.log('文件二进制数据：', buffer);
+      });
+    }
+  });
+
+  const dropArea = document.getElementById('dropArea');
+
+  // 阻止默认拖拽行为
+  [ 'dragenter', 'dragover', 'dragleave', 'drop' ].forEach(eventName => {
+    dropArea.addEventListener(eventName, preventDefaults, false);
+  });
+
+  function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  // 高亮拖拽区域
+  [ 'dragenter', 'dragover' ].forEach(eventName => {
+    dropArea.addEventListener(eventName, highlight, false);
+  });
+
+  [ 'dragleave', 'drop' ].forEach(eventName => {
+    dropArea.addEventListener(eventName, unhighlight, false);
+  });
+
+  function highlight() {
+    dropArea.style.borderColor = '#333';
+  }
+
+  function unhighlight() {
+    dropArea.style.borderColor = '#ccc';
+  }
+
+  // 处理文件 drop 事件
+  dropArea.addEventListener('drop', handleDrop, false);
+
+  function handleDrop(e) {
+    const dt = e.dataTransfer;
+    const fileBlob = dt.files[0]; // 获取拖拽的文件 Blob
+
+    if (fileBlob) {
+      identifyImageFormat(fileBlob)
+      console.log('拖拽获取的文件 Blob：', fileBlob);
+    }
+  }
+
+</script>
+<script type="text/javascript">
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+
+  // 在 Canvas 上绘制内容
+  ctx.fillStyle = 'red';
+  ctx.fillText('Hello World', 70, 40);
+  ctx.fillRect(50, 50, 100, 100);
+
+  document.getElementById('saveBtn').addEventListener('click', () => {
+    // 将 Canvas 内容转换为 PNG 格式的 Blob
+    canvas.toBlob((blob) => {
+      if (blob) {
+        console.log('Canvas 生成的图像 Blob：', blob);
+        // 可用于下载或上传
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'canvas-image.png';
+        a.click();
+        URL.revokeObjectURL(url); // 释放资源
+      }
+    }, 'image/png'); // 支持 'image/jpeg' 等格式
+  });
+</script>
+</html>
