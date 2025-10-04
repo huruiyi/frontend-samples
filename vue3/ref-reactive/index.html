@@ -1,0 +1,27 @@
+<script type="module">
+  // import { createApp, reactive, ref } from 'vue'
+  import { createApp, reactive, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+  createApp({
+    setup() {
+      const counter = reactive({ count: 0 })
+      const message = ref('Hello World!')
+      // 可选：增加一个计数方法
+      const increment = () => {
+        counter.count++
+      }
+      return {
+        counter,
+        message,
+        increment
+      }
+    }
+  }).mount('#app')
+</script>
+
+<div id="app">
+  <h1>{{ message }}</h1>
+  <p>Count is: {{ counter.count }}</p>
+  <button @click="increment">+1</button>
+
+</div>
