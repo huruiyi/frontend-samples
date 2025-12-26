@@ -1,5 +1,10 @@
 <script setup lang="ts">
+
+import { reactive, ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
+
+const counter = reactive({ count: 0 })
+const message = ref('Hello World!')
 </script>
 
 <template>
@@ -12,6 +17,10 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+
+  <h1>{{ message }}</h1>
+  <p>Count is: {{ counter.count }}</p>
+  <button @click="counter.count++">+1</button>
 </template>
 
 <style scoped>
@@ -21,9 +30,11 @@ import HelloWorld from './components/HelloWorld.vue'
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
