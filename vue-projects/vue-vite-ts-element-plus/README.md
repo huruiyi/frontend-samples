@@ -1,4 +1,4 @@
-# vite-project
+# vue-vite-ts-element-plus
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -46,57 +46,3 @@ npm run build
 ```sh
 npm run lint
 ```
-
-
-
-npm create vite@latest
-
-> npx
-> create-vite
-
-│
-◇  Project name:
-│  vite-project
-│
-◇  Select a framework:
-│  Vue
-│
-◇  Select a variant:
-│  Official Vue Starter ↗
-│
-◇  Use rolldown-vite (Experimental)?:
-│  No
-│
-◇  Install with npm and start now?
-│  Yes
-Need to install the following packages:
-create-vue@3.18.5
-Ok to proceed? (y) y
-
-
-> npx
-> create-vue vite-project
-
-┌  Vue.js - The Progressive JavaScript Framework
-│
-◇  请选择要包含的功能： (↑/↓ 切换，空格选择，a 全选，回车确认)
-│  TypeScript, JSX 支持, Router（单页面应用开发）, Pinia（状态管理）, ESLint（错误预防）, Prettier（代码格式化）
-│
-◇  选择要包含的试验特性： (↑/↓ 切换，空格选择，a 全选，回车确认)
-│  none
-│
-◇  跳过所有示例代码，创建一个空白的 Vue 项目？
-│  No
-
-正在初始化项目 vite-project...
-│
-└  项目初始化完成，可执行以下命令：
-
-   cd vite-project
-   npm install
-   npm run format
-   npm run dev
-
-| 可选：使用以下命令在项目目录中初始化 Git：
-
-   git init && git add -A && git commit -m "initial commit"
