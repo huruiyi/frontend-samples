@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="about">Hello World</div>
+    <div class="about">
+      <SvgIcon name="integer" class-name="text-4xl" />
+    </div>
     <div>
       <el-row>
         <el-col :span="24">
@@ -54,6 +56,8 @@
 <script setup lang="ts">
 import AttributesTable, { type AttributesTableInstance } from '@/components/AttributesList.vue'
 import { ref } from 'vue'
+
+import SvgIcon from '@/components/SvgIcon.vue'
 const attributesTableRef = ref<AttributesTableInstance | null>(null)
 
 const attributes = ref('')
