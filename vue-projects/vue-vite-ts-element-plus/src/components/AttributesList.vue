@@ -27,12 +27,11 @@
             style="width: 100%"
           >
             <template #prefix>
-              <SvgIcon
+              <div
                 v-if="scope.row.type"
-                :name="getValueType(scope.row.type).icon"
-                style="margin-right: 8px; width: 16px; height: 16px"
-                class-name="text-4xl"
-              />
+                :class="`i-svg:${getValueType(scope.row.type).icon}`"
+                style="width: 16px; height: 16px"
+              ></div>
             </template>
             <el-option
               v-for="item in typeOptions"
@@ -41,11 +40,10 @@
               :value="item.value"
             >
               <div style="display: flex; align-items: center">
-                <SvgIcon
-                  :name="item.icon"
-                  style="margin-right: 8px; width: 16px; height: 16px"
-                  class-name="text-4xl"
-                />
+                <div
+                  :class="`i-svg:${item.icon}`"
+                  style="margin-right: 16px; width: 16px; height: 16px"
+                ></div>
                 <span>{{ item.label }}</span>
               </div>
             </el-option>
@@ -77,7 +75,6 @@ import { ref, watch } from 'vue'
 import { ValueTypeConfig, getValueType } from '@/enums/base.enum.ts'
 // 定义类型选项（基于枚举配置）
 const typeOptions = Object.values(ValueTypeConfig)
-import SvgIcon from '@/components/SvgIcon.vue'
 
 // 定义属性项接口
 interface AttributeItem {

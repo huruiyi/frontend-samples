@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="about">
-      <SvgIcon name="integer" class-name="text-4xl" />
+      <div class="i-svg-integer text-4xl"></div>
+      <div class="i-svg:float text-4xl"></div>
+      <div class="i-svg-date-time text-4xl"></div>
+      <div class="i-svg-search text-4xl"></div>
     </div>
     <div>
       <el-row>
@@ -56,8 +59,6 @@
 <script setup lang="ts">
 import AttributesTable, { type AttributesTableInstance } from '@/components/AttributesList.vue'
 import { ref } from 'vue'
-
-import SvgIcon from '@/components/SvgIcon.vue'
 const attributesTableRef = ref<AttributesTableInstance | null>(null)
 
 const attributes = ref('')
@@ -69,6 +70,7 @@ const attributes = ref('')
     min-height: 10vh;
     display: flex;
     align-items: center;
+    gap: 1rem;
   }
 }
 </style>
