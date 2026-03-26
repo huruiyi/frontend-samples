@@ -40,6 +40,10 @@
               <Icon type="ios-settings"></Icon>
               <span>自定义插件</span>
             </MenuItem>
+            <MenuItem name="1-9" @click.native="handleUrl('/shopping')">
+              <Icon type="ios-cart"></Icon>
+              <span>购物</span>
+            </MenuItem>
           </Submenu>
         </Menu>
       </Sider>
