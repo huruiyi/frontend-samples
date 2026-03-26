@@ -5,29 +5,29 @@
         <Icon type="ios-cube-outline"/>
         基础数据
       </p>
-      <Row>
-        <Form :model="dataDic" label-position="right" :label-width="100">
-          <Col>
+      <Form :model="dataDic" label-position="right" :label-width="72" class="query-form">
+        <Row :gutter="12">
+          <Col :xs="24" :sm="12" :md="8" :lg="6">
             <FormItem label="类型">
-              <Input v-model="dataDic.Type"/>
+              <Input v-model="dataDic.Type" />
             </FormItem>
           </Col>
-          <Col>
+          <Col :xs="24" :sm="12" :md="8" :lg="6">
             <FormItem label="代码">
-              <Input v-model="dataDic.Code"/>
+              <Input v-model="dataDic.Code" />
             </FormItem>
           </Col>
-          <Col>
+          <Col :xs="24" :sm="12" :md="8" :lg="6">
             <FormItem label="名称">
-              <Input v-model="dataDic.Name"/>
+              <Input v-model="dataDic.Name" />
             </FormItem>
           </Col>
-          <Col>
-            <Button icon="ios-search-outline" shape="circle" type="primary" @click="queryList">检索</Button>
-            <Button icon="ios-cut-outline" shape="circle" style="margin-left: 8px" @click="resetQuery">重置</Button>
+          <Col :xs="24" :sm="12" :md="24" :lg="6" class="query-actions">
+            <Button icon="ios-search-outline" type="primary" @click="queryList">检索</Button>
+            <Button icon="ios-cut-outline" class="btn-gap" @click="resetQuery">重置</Button>
           </Col>
-        </Form>
-      </Row>
+        </Row>
+      </Form>
     </Card>
     <Card dis-hover :bordered="false">
       <Button icon="ios-add-circle-outline" type="primary" ghost @click.native="addRecord">新增</Button>
@@ -231,5 +231,24 @@ export default {
 </script>
 
 <style scoped>
+.query-form {
+  margin-bottom: 6px;
+}
 
+.query-actions {
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+
+.btn-gap {
+  margin-left: 8px;
+}
+
+@media (max-width: 991px) {
+  .query-actions {
+    height: auto;
+    margin-bottom: 8px;
+  }
+}
 </style>

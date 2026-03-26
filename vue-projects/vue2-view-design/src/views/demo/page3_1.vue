@@ -12,7 +12,7 @@ export default {
   components : { child31 },
   methods : {
     fatherMethod() {
-      alert("page3_1.fatherMethod()")
+      this.$Message.info('方式一触发：$parent 调用父组件方法')
     }
   }
 }

@@ -1,18 +1,34 @@
 <template>
-  <Card v-if="!isEditMode">
-
-    <p slot="title">
+  <div v-if="!isEditMode" class="page0-grid-wrap">
+    <div class="page0-title">
       <Icon type="ios-cube-outline" />
-      集合循环和自定义组件
-    </p>
+      <span>集合循环和自定义组件</span>
+    </div>
 
-    <Lists></Lists>
+    <Row :gutter="16">
+      <Col :xs="24" :md="12" :xl="8" class="grid-col">
+        <Card class="feature-card">
+          <p slot="title">列表集合</p>
+          <Lists></Lists>
+        </Card>
+      </Col>
 
-    <HelloWorld p-msg="haha" msg="Welcome to Your Vue.js App" />
+      <Col :xs="24" :md="12" :xl="8" class="grid-col">
+        <Card class="feature-card">
+          <p slot="title">组件示例</p>
+          <HelloWorld p-msg="haha" msg="Welcome to Your Vue.js App" />
+        </Card>
+      </Col>
 
-    <say-hello :who="who"></say-hello>
-    <h2>{{ page0P1 }}</h2>
-  </Card>
+      <Col :xs="24" :md="24" :xl="8" class="grid-col">
+        <Card class="feature-card">
+          <p slot="title">消息区</p>
+          <say-hello :who="who"></say-hello>
+          <h2 class="message-title">{{ page0P1 }}</h2>
+        </Card>
+      </Col>
+    </Row>
+  </div>
 </template>
 
 <script>
@@ -40,5 +56,32 @@ export default {
 </script>
 
 <style scoped>
+.page0-grid-wrap {
+  padding: 4px;
+}
+
+.page0-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.grid-col {
+  margin-bottom: 16px;
+}
+
+.feature-card {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.message-title {
+  margin-top: 12px;
+  color: #2563eb;
+}
 
 </style>

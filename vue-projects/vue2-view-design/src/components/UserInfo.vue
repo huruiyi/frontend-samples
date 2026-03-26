@@ -1,18 +1,12 @@
 <template>
-  <div>
-    个人信息
-    <p>
-      <button @click="increment">Increment</button>
-    </p>
-    <p>
-      <button @click="get">Get</button>
-    </p>
-    <p>
-      <button @click="errorReq">Error Request</button>
-    </p>
-    <p>
-      <button @click="errorRes">Error Response</button>
-    </p>
+  <div class="user-info">
+    <h3 class="title">个人信息</h3>
+    <div class="action-grid">
+      <Button class="action-btn" type="primary" @click="increment">Increment</Button>
+      <Button class="action-btn" @click="get">Get</Button>
+      <Button class="action-btn" type="warning" @click="errorReq">Error Request</Button>
+      <Button class="action-btn" type="error" @click="errorRes">Error Response</Button>
+    </div>
   </div>
 </template>
 
@@ -82,5 +76,21 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  margin: 0 0 12px;
+  color: #1f2937;
+  font-size: 16px;
+}
+
+.action-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.action-btn {
+  width: 160px;
+  height: 36px;
+}
 
 </style>

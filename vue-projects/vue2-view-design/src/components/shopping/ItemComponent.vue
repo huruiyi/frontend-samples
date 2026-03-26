@@ -1,10 +1,8 @@
 <template>
-  <li :class="{ 'removed': item.checked }">
-    <div class="checkbox">
-      <label key="x">
-        <input type="checkbox" v-model="item.checked"> {{ item.text }}
-      </label>
-    </div>
+  <li class="item-row" :class="{ removed: item.checked }">
+    <Checkbox v-model="item.checked">
+      <span class="item-text">{{ item.text }}</span>
+    </Checkbox>
   </li>
 </template>
 
@@ -15,19 +13,25 @@ export default {
 </script>
 
 <style scoped>
-.removed {
-  color: gray;
-}
-
-.removed span {
-  text-decoration: line-through;
-}
-
-li {
+.item-row {
   list-style-type: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  transition: all .2s ease;
 }
 
-li span {
-  margin-left: 5px;
+.item-row:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+.removed {
+  color: #9ca3af;
+}
+
+.removed .item-text {
+  text-decoration: line-through;
 }
 </style>
