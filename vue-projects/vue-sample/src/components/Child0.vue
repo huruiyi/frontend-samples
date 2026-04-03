@@ -1,8 +1,8 @@
 <template>
   <div class="child-div">
-    <h3>子组件0</h3>
-    <p>Count: {{ count }}</p>
-    <button class="s-button" @click="childEvent">child0 add</button>
+    <h3>步骤计数器</h3>
+    <p>当前步骤推进次数：{{ count }}</p>
+    <button class="s-button" @click="childEvent">组件内自增</button>
   </div>
 
 </template>

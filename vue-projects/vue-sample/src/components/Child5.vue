@@ -1,7 +1,8 @@
 <template>
   <div class="child-div">
-    <h3>子组件5</h3>
-    <button class="s-button" @click="parentDo">调用父组件方法</button>
+    <h3>深层操作入口</h3>
+    <p>当前按钮通过 inject 调用上层注入的方法。</p>
+    <button class="s-button" @click="parentDo">触发上层统一动作</button>
   </div>
 </template>
 
