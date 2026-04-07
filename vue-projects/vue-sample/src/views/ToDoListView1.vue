@@ -1,7 +1,7 @@
 <script setup>
 import ToDoListV1 from '../components/ToDoListV1.vue'
 import ToDoListV2 from '../components/ToDoListV2.vue'
-import '../assets/ToDoList.css'
+import '../assets/views/ToDoList.css'
 
 const sections = [
   {

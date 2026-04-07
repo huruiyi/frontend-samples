@@ -54,9 +54,13 @@ let route = [
     component : DebouncedView
   },
   {
-    path : '/demo1',
-    name : 'demo1',
+    path : '/component-communication',
+    name : 'component-communication',
     component : UserChild1
+  },
+  {
+    path : '/demo1',
+    redirect : '/component-communication'
   },
   {
     path : '/emoji',

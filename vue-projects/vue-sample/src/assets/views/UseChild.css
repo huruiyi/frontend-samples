@@ -1,0 +1,134 @@
+.child-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.child-page__hero,
+.child-page__card {
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 18px 40px rgba(84, 60, 33, 0.08);
+}
+
+.child-page__hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(255, 247, 236, 0.92), rgba(237, 246, 243, 0.9));
+}
+
+.child-page__eyebrow {
+  margin-bottom: 10px;
+  color: var(--color-accent);
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.child-page__intro {
+  max-width: 56ch;
+  color: var(--color-text-soft);
+}
+
+.child-page__tips {
+  display: grid;
+  gap: 12px;
+  min-width: 320px;
+}
+
+.child-page__tips div {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.child-page__tips strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-heading);
+}
+
+.child-page__tips p {
+  color: var(--color-text-soft);
+}
+
+.child-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.child-page__card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 280px;
+}
+
+.child-page__card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.child-page__card-head span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15, 140, 121, 0.12);
+  color: var(--color-accent-strong);
+  font-size: 0.78rem;
+}
+
+.child-page__card-note {
+  min-height: 44px;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
+.child-page__flow-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.child-page__flow {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(212, 106, 61, 0.12);
+  color: var(--color-accent);
+  font-style: normal;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.child-page__flow-row small {
+  color: var(--color-text-soft);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .child-page__hero {
+    flex-direction: column;
+  }
+
+  .child-page__tips {
+    min-width: 0;
+  }
+
+  .child-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1080px) {
+  .child-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

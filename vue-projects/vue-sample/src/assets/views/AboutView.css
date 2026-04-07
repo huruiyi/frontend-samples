@@ -1,0 +1,43 @@
+.about-page {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+}
+
+.about-page__intro,
+.about-page__panel {
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 18px 40px rgba(84, 60, 33, 0.08);
+}
+
+.about-page__eyebrow {
+  margin-bottom: 12px;
+  color: var(--color-accent);
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.about-page h1 {
+  margin-bottom: 14px;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.about-page p {
+  color: var(--color-text-soft);
+}
+
+.about-page__list {
+  margin-top: 18px;
+  color: var(--color-heading);
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    grid-template-columns: 1fr;
+  }
+}
