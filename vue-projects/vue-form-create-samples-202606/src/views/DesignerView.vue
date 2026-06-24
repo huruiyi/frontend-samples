@@ -7,6 +7,7 @@ import { useFormStore } from '../stores/form'
 const store = useFormStore()
 const designerRef = shallowRef<any>(null)
 const localJson = ref(store.ruleJson)
+const jsonModalVisible = ref(false)
 
 // 设计器 ready 后同步当前规则
 function onDesignerReady() {
@@ -32,10 +33,16 @@ function clearDesign() {
   message.success('已清空设计器')
 }
 
+function openJsonModal() {
+  localJson.value = store.ruleJson
+  jsonModalVisible.value = true
+}
+
 function loadFromJson() {
   try {
     store.loadFromJson(localJson.value)
     designerRef.value?.setRule(store.rule)
+    jsonModalVisible.value = false
     message.success('已从 JSON 加载')
   } catch {
     message.error('JSON 格式错误')
@@ -48,7 +55,7 @@ function loadFromJson() {
     <div class="toolbar">
       <a-button type="primary" @click="applyDesign">应用并保存规则</a-button>
       <a-button @click="clearDesign">清空</a-button>
-      <a-button @click="loadFromJson">从右侧 JSON 加载</a-button>
+      <a-button @click="openJsonModal">查看并加载JSON</a-button>
       <router-link to="/preview" custom v-slot="{ navigate }">
         <a-button type="link" @click="navigate">前往预览 →</a-button>
       </router-link>
@@ -61,12 +68,18 @@ function loadFromJson() {
       @ready="onDesignerReady"
     />
 
-    <a-card title="规则 JSON（可编辑后加载回设计器）" class="json-card">
-      <a-textarea v-model:value="localJson" :rows="10" class="code-input" />
-      <div class="toolbar">
+    <a-modal
+      v-model:open="jsonModalVisible"
+      title="查看/编辑 JSON"
+      width="700px"
+      :footer="null"
+    >
+      <a-textarea v-model:value="localJson" :rows="16" class="code-input" />
+      <div class="modal-footer">
+        <a-button @click="jsonModalVisible = false">取消</a-button>
         <a-button type="primary" @click="loadFromJson">加载到设计器</a-button>
       </div>
-    </a-card>
+    </a-modal>
   </div>
 </template>
 
@@ -91,12 +104,15 @@ function loadFromJson() {
   min-height: 420px;
 }
 
-.json-card {
-  flex-shrink: 0;
-}
-
 .code-input {
   font-family: var(--mono);
   font-size: 13px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
 }
 </style>
